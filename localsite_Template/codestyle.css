@@ -1,0 +1,72 @@
+
+body {
+			background: #3b444b;;
+			font-family: "Montserrat", sans-serif;
+			.w3-row-padding img {margin-bottom: 12px}/* Set the width of the sidebar to 120px */
+			margin: 0 100px; /* Added 100px padding to the left and right margins */
+			.w3-sidebar {width: 120px;background: #222;} /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+			#main {margin-left: 120px}/* Remove margins from "page content" on small screens */
+			background-color:#3b444b ; /* Set background color to grey */
+            color: white; /* Set text color to black */
+ }
+
+th, h1, h2, h3 {
+            color: orange;
+}
+div {
+            background-color: black; /* Set background color to white for the first div */
+            color: white; /* Set text color to black for the first div */
+            padding: 10px; /* Add padding to the div */
+            margin-bottom: 20px; /* Add margin-bottom to create space between divs */
+}
+
+div:nth-child {
+            background-color: #3b444b; /* Set background color to black for odd-numbered divs */
+            color: white; /* Set text color to white for odd-numbered divs */
+}
+footer {
+            background-color: dark-grey; /* Set background color to white for the footer */
+            color: black; /* Set text color to black for the footer */
+            padding: 10px; /* Add padding to the footer */
+}
+#nav {
+	
+#}
+pre {
+  position: relative;
+  background: #000000;
+  color: green;
+  padding: 10px;
+  font-size: 15px;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  border: 1px solid #e6e7e9;
+  max-width: 550px;
+}
+code {
+  position: relative;
+  background: blue;
+  color: orange;
+  padding: 10px;
+  font-size: 15px;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  border: 1px solid #e6e7e9;
+  max-width: 450px;
+.copy-button {
+  position: absolute;
+  top: 2px;
+  right: 10px;
+  cursor: pointer;
+  color: #fff;
+  background: gray;
+  border-radius: 0.5em;
+  padding: 2px 7px;
+}
+
+.copy-button:hover {
+  color: green;
+  background: white;
+}
+
+        

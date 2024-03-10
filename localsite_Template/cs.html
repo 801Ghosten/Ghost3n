@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kali Cheat Sheet</title>
+<meta charset="UTF-8">
+<link rel="icon" href="https://www.thinknts.com/wp-content/uploads/2021/03/logo-desktop.png.webp" type="image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="codestyle.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="w3-black">
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+   <img src="NTS-logosmall.jpg" alt="NTS logo" class="w3-image" width="100px" height="100px">
+<!-- Do not edit above ths line Edit jumplink names in hte below 2 sections in order and make sure they corespond to the section id -->
+<a href="#Users" class="w3-bar-item w3-button w3-padding-large w3-hover-orange"><p>Users</p></a>
+<a href="#Applications" class="w3-bar-item w3-button w3-padding-large w3-hover-orange"><p>Applications</p></a>
+<a href="#Structure" class="w3-bar-item w3-button w3-padding-large w3-hover-orange"><p>Structure</p></a>
+<a href="#Files" class="w3-bar-item w3-button w3-padding-large w3-hover-orange"><p>Files</p></a>
+<a href="#Administrative" class="w3-bar-item w3-button w3-padding-large w3-hover-orange"><p>Administrative</p></a>
+<a href="#Networking" class="w3-bar-item w3-button w3-padding-large w3-hover-orange"><p>Networking</p></a> 
+<a href="#UFW" class="w3-bar-item w3-button w3-padding-large w3-hover-orange"><p>UFW</p></a>
+<a href="#SSH" class="w3-bar-item w3-button w3-padding-large w3-hover-orange"><p>SSH</p></a>
+</nav>
+<!-- Match the jumplink name to the above-->
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+     <a href="#Users" class="w3-bar-item w3-button" style="width:25% !important">Users</a>
+	  <a href="#Applications" class="w3-bar-item w3-button" style="width:25% !important">Applications</a>
+	  <a href="#Structure" class="w3-bar-item w3-button" style="width:25% !important">Structure</a>
+	  <a href="#Files" class="w3-bar-item w3-button" style="width:25% !important">Files</a>
+	  <a href="#Administrative" class="w3-bar-item w3-button" style="width:25%">Administrative</a>
+      <a href="#Networking" class="w3-bar-item w3-button" style="width:25%">Networking</a> 
+	  <a href="#UFW" class="w3-bar-item w3-button" style="width:25%">UFW</a>
+      <a href="#SSH" class="w3-bar-item w3-button" style="width:25%">SSH</a>	  
+  </div>
+</div>
+<div style="word-wrap: break-word">
+<a href="\\\usr/share/kali-defaults/web/index.html"><img src="/usr/share/icons/site/metalShield.png" style="width:100px" style="height:100px"></a>
+<h1 align="center"> Most Common Terminal Commands</h1><br>
+<img src="https://cdn.educba.com/academy/wp-content/uploads/2019/01/Kali-Linux-Commands.jpg" alt="cmd logo" width="100%" height="300px">
+</div>
+<hr>
+<!-- Users Section --->
+<div class="w3-content w3-justify w3-text-grey w3-padding-64" id="Users">
+<div><hr>
+ <h2>Users </h2>
+<br>
+<ol>
+<!-- Section 1-->
+<li>Add user to realm which is used to add a user from AD so they can log in with AD creds
+	<pre id="CB">realm permit username</pre></li>
+<!-- Section 2-->	
+<li> create new user example: adduser johnathan <br> allways lowercase
+	<pre id="CB"> sudo adduser -m username </pre></li>
+<!-- Section 3-->
+<li> chnage user password example:(sudo passwd jonathan)
+	<pre id="CB">sudo passwd username</pre></li>
+<!-- Section 4-->
+<li>Add user to sudo group
+	 <pre id="CB">sudo usermod -aG username sudo</pre></li> 
+<!-- Section 5-->	 
+<li>Verify Groups and user in those Groups
+	 <pre id="CB"> less /etc/group</pre></li> 
+<!-- Section 6-->
+<li>List all users
+	 <pre id="CB"> users</pre></li> 
+<h3>Audit Users</h3>
+		<p><em> Use nano or micro to edit and cat to audit</em></p>
+<!-- Section 7-->	 
+<li> Track all user commands. Opens hidden user logs. Also good for audits
+	<pre id="CB">sudo cat /home/username/.bash_history <br>
+	//--or check logs with bellow --//<br>
+	cd /var/log for all logs </pre></li>
+<!-- Section 8-->	
+<li>Add user to security access list 
+	 <pre id="CB"> nano /etc/security/access.conf</pre></li> 
+<!-- Section 9-->	 
+<li> Give user ssh access per the sshd config file
+	 <pre id="CB">sudo nano /etc/ssh/sshd_config</pre></li> 
+<!-- Section 10-->
+<li>Check when user last logged in or active sessions
+	 <pre id="CB">last </pre></li>
+<!-- Section 11-->
+<li>Check when user last failed logged in
+	 <pre id="CB">lastb -15</pre></li>	
+<!-- Section 12-->	 
+<li>Display all users sessions <pre id="CB">who </pre> </li>
+<!-- Section 13-->	
+<li>displays information about the users currently on the machine<pre id="CB">w -if </pre> </li>
+<!-- Section 14	
+<li>Kill user session<pre id="CB">sudo pkill -9 -u username </pre> </li>
+<!-- Section 15	
+<li>    <pre id="CB"> </pre> </li>
+<!-- Section 16
+<li>    <pre id="CB"> </pre> </li>
+
+-->	
+</ol>
+</div>
+</div>
+<!-- End of User Section ->
+<!-- Applications Section -->
+<div class="w3-content w3-justify w3-text-grey w3-padding-64" id="Applications">
+<!-- Terminal Cmds Table 3-->
+<div><hr>
+<h2>Applications</h2>
+<br>
+<!-- Section 1-->
+<h3>Task</h3>
+<!-- Section 2-->
+<li> Update application repository before and after installing new apps</li>
+	<pre id="CB">sudo apt-get update</pre></li>
+<!-- Section 3-->
+<li> upgrade all app packages
+	<pre id="CB">sudo apt upgrade </pre></li>
+<!-- Section 4-->
+<!-- Section 5 -->
+<li> Remove obsolite apps
+	<pre id="CB">sudo apt autoremove</pre></li>
+<li>Uninstall application
+<pre id="CB">sudo apt remove appname</pre></li>
+
+<li>Clean package manager 
+	<pre id="CB">sudo apt clean</pre></li>
+	<br>
+	<h3> Application mananger notes</h3>
+<p> You can also install nala which is a more graphical package manager with 
+<pre id="CB">sudo apt install nala</pre> then relace any of the above commands "apt" with nala</p>
+<p> apt stands for aptitude and is a package manager simular to apple play store for instance, but built specificaly for Debian based Linux distrobutions such ad kali and Ubuntu</p>
+<p>Ubuntu also uses another package installer called snap. So if using Ubuntu and apt dose not work try replacing apt or nala with snap, or look up the snap install command for the program you want ot install.</p>
+<p> Additionally, you may be find your self sshed into a remote system that like Centos that is a RedHat distrobution of linux, and it now uses "dnf" as a packagemanager. Older RedHat distros may still be using the "yum" package manager.It is not wise to install multiple package managers unless you really need to. Especially if it is not of the same linux distrobution. Example you wan to install a program you think is cool on your kali device but the command says sudo yum install coolApp. You should instead search for the debian based package command. ie sudo apt install coolApp. </p>
+<p>Applications are not all avaliable through the apt package manager. Some app may require you to 1st update the sources.list file with the distrobution mirror URL in order to point to the correct download and for updates of the apps. <br>
+Information about the kali sources.list repository file for linking new "repos" can be <a href="https://www.kali.org/docs/general-use/kali-linux-sources-list-repositories/">found here</a>.<br> To view with out editing the files use the command below. Before making any changes to this file and addiing repos like Ubuntu mirros be sure to use the cp command to create a copy backup of the file <pre id="CB">cat /etc/apt/sources.list</pre> </p>
+</div></div>   
+<!-- End of Application Section ->
+<hr>
+<!-- File structure Section -->
+<div class="w3-content w3-justify w3-text-white w3-padding-64" id="Structure">
+<h3> Linux File Structure</h3>
+<br>
+<img src="https://4.bp.blogspot.com/-06Qxzn1Z2vo/V02pIlO-znI/AAAAAAAACc0/jAHkWxQ9_bAeD_4XwNLYmBheanqCqhKcACLcB/s1600/Capture.PNG" height="500px" width="700px">
+<p>So, using the above Linux file system chart, we must study what each folder in the Linux file system is for in order to gain a better understanding of how Linux works in general. It should be noted that not every folder described here or illustrated above is present in every Linux distribution, but the vast majority of them are.</p>
+
+<p>the Linux file system is a logical rather than a physical system. Separate folders in the system may be on different partitions of the disc, or even on different discs entirely, but everything is still logically in the same place.
+
+<p>The simplest approach to absorb this concept is to just use Linux as your everyday driver, as immersion is the greatest way to learn. For this task, Ubuntu or Linux Mint are probably the best options. After a while of using the Linux file system, everything will click and you’ll grasp what’s going on.</p>
+
+<p>/ – this is known as “root”, the logical beginning of the Linux file system structure. Every single file path in Linux begins from root in one way or another. / contains the entirety of your operating system.</p>
+
+<p>/bin – Pronounced “bin” (as opposed to “bine”), this is where most of your binary files are stored, typically for the Linux terminal commands and core utilities, such as cd (change directory), pwd (print working directory), mv (move), and so on.</p>
+
+<p>/boot – This is where all the needed files for Linux to boot are kept. Many people, including myself, like to keep this folder in it’s own separate partition on the hard drive, especially when dual-booting is involved. A key thing to note is that even when /boot is stored on different partition, it is still logically located at /boot as far as Linux is concerned.</p>
+
+<p>/dev – This is where your physical devices are mounted, such as your hard drives, USB drives, optical drives, and so on. We’ve already explored that typically, your system hard drive is mounted under /dev/sda, whereas your USB thumb drive might be mounted under /dev/sde. You may also have different partitions on your disk, so you’ll see /dev/sda1, /dev/sda2, and so on. In Windows, when you go to “My Computer” or “Computer” and you can see all of the physical devices and drives connected to your computer, this is the equivalent of /dev in Linux file structure.</p>
+
+<p>/etc – Pronounced “et-see”, although some also prefer to spell it out, is where configuration files are stored. Configurations stored in /etc will typically affect all users on the system; whereas users can also store configuration files under their own /home folders, which will only affect that particular user.</p>
+
+<p>/home – This is where you’ll spend the vast majority of your time because it has all of your personal data. The /home/username directory contains the Desktop, Documents, Downloads, Photos, and Videos folders. If you choose, you can keep files directly in your /home folder rather than in a sub-folder. When you open a command-line terminal in Linux, the terminal typically links to your /home/username folder, unless you’ve manually altered the default destination to something else.</p>
+
+<p>/lib – This is the location of libraries. When installing Linux software packages, you’ll notice that additional libraries are frequently downloaded, and they almost always begin with lib-something. These are the files required for your Linux apps to function. This folder is similar to, but not exactly the same as, the Program Files folder in Windows.</p>
+
+<p>Unlike Windows, libraries can be shared between many distinct programmes, resulting in Linux installations that are often far lighter than Windows, because in Windows, each programme requires its own library, even if it is redundant and already existing for another programme. Certainly an advantage of the Linux file system structure.</p>
+
+<p>/media – Another place where external devices such as optical drives and USB drives can be mounted. This varies between different Linux distros.</p>
+
+<p>/mnt – This is basically a placeholder folder used for mounting other folders or drives. Typically this is used for Network locations, but you could really use it for anything you want. I used to use it as the mount point for my media server’s hard drive (/mnt/server).</p>
+
+<p>/opt – Optional software for your system that is not already managed by your distro’s package manager. I don’t really ever find myself using this, your mileage may vary.</p>
+
+<p>/proc – The “processes” folder where a lot of system information is represented as files (remember, everything is a file). It basically provides a way for the Linux kernel (the core of the operating system) to send and receive information from various processes running in the Linux environment.</p>
+
+<p>/root – This is the equivalent to the /home folder specifically for the root user, also called the superuser. You really don’t want to touch anything in here unless you know what you’re doing.</p>
+
+<p>/sbin – Similar to /bin, except that it’s dedicated to certain commands that can only be run by the root user, or the superuser.</p>
+
+<p>/tmp – This is where temporary files are stored, and they are usually deleted upon shutdown, which saves you from having to manually delete them like is required in Windows.</p>
+
+<p>/usr – Contains files and utilities that are shared between users.</p>
+
+<p>/var – This is where variable data is kept, usually system logs but can also include other types of data as well.</p>
+
+<p>You can do further study online and dive deeper to learn more about specific programmes and usage of each of the above-mentioned folders, but for the average everyday home user, your /home folder is usually the only one with which you’ll be directly engaging.</p>
+
+<p>If you’re troubleshooting, you may need to go into the other files, although most current Linux distributions automatically maintain these folders and require little to no user intervention.</p>
+</div>
+</div>   
+<!-- End of File Structure Section Section-->
+<hr>
+<!-- File Section -->
+<div class="w3-content w3-justify w3-text-white w3-padding-64" id="Files">
+<div><hr>
+<h2>All About Files AKA Directories</h2>
+<br>
+<h3>Files Commands and Structure </h3>
+<br>
+<!-- Section 1-->
+<ol>
+<li>Confirm your directory location while in the terminal
+	<br>pwd shows your current Present Working Directory
+	<pre =id="CB" pwd </pre>
+	In some terminals like Kali it is alwasy displayed in the terminal 
+	<pre id="CB">┌──(username㉿computername)-[~/Desktop]
+└─$ </pre> Notice the above is in the ~/Desktop directory</li>
+<!-- Section 2-->
+<li> Navagate directories by changeing directory aka the file your in
+	<pre id="CB"> cd /filename/subfilename/</pre> exapmple:cd /home/username/Videos<br> capital letters matter
+	Go one directoty up at a time 
+	<pre id="CB">cd .. </pre>
+	Go up 2 directory levels 
+	<pre id="CB">cd ../../</ore></li>
+<!-- Section 3 ---> 
+<li> Change Directory down or back a directory from the one your in which is simular cd Command run: cd /enter/your/file/path/
+     <pre id="CB"> cd /usr/home/yourusername/Documents/</pre>
+	 use (cd -) to go bacK in to it
+     In some cases you want to just list the contents without changing directory so use
+     <pre id="CB"> ll /usr/home/yourusername/Documents/</pre>	 
+<!-- Section 4-->
+<li> list current files and directories ll above will print simular results</li>
+	<pre id="CB"> ls </pre>
+	to show hidden files indicated with a ./, <br> or use ctrl+H <br> save file as .filename to hide
+	<pre id="CB">ls -a </pre> </li>
+<!-- Section 3-->
+<li>Sort list of Directry Contnet. Sorts with the ls command. There is more then one way to sort
+	<pre id="CB">ls -la | sort</pre></li>
+<!-- Section 4-->
+<li> execute a downloaded file simular to running an .exe in windows but from the terminal<br>First make the file executable
+	<pre id="CB">chmod +x ./filename.sh<br>sh ./filename</pre>
+<!-- Section 5-->
+<li> navagate to root dir draws back to main root folder</li>
+	<pre id="CB">cd / <br>or<br> cd ~</pre></li>
+<!-- Section 5-->
+<li> move file contents moves file to diffrent location
+	<pre id="CB">mv filename.extention</pre>
+	 This command can also change a file or directory name<br>
+	<pre id="CB">mv NewName OldName</pre></li>
+<!-- Section 7-->
+<li> create directory in terminal, makes a folder</li>
+	<pre id="CB"> mkdir DirectoryNameHere </pre>
+<!-- Section 8 -->
+<li> Delete Directory removes but wont destroy
+	<pre id="CB">rmdir foldername </pre>
+	For Directories not empty-cell
+	<pre id="CB">rmdir -r directoryname</pre></li>
+	Remove File
+	<pre id="CB">rm filename</pre>
+	<li> perminantly delete a file good for covering tracks
+	<pre id="CB">shred -vfzu </pre></li>
+</ol>
+</div>
+</div>
+<!-- File Section End--> 
+<hr>
+<!-- Administrative Section --> 
+<div class="w3-content w3-justify w3-text-white w3-padding-64" id="Administrative">
+
+<h3> Linux Administrative Section</h3>
+<br>
+
+<!-- Section 1 permissions-->
+<p> Since I just covered files lets go into file permissions
+ The best way to check the file permissions in Linux is using the “ls -l” command followed by the name of the file. For example, if we wanted to view the permissions for a file called “test.txt”, we would type ls -l test.txt at the command line. This will return a list of information about the file, including the permissions.<br>
+ To get a more detailed view of the file permissions, use the “stat” command instead of ls. The “stat” command takes a few more options than ls, so be sure to read the man pages for more information.</p>
+</p>
+<h3> Change file permissions</h3>
+<p> elevate or downgrade permissions <pre id="CB">chmod 744 filename</pre>
+see below for more examples <br>
+1st # is owner 2nd is group 3rd is others</p>
+</table>
+<table width="100%">
+<tr> <th>Value</th>
+<th>Numeric Value </th>
+<th>Explanation</th></tr>
+<tr><td>-rw-- </td>
+<td>600</td>
+<td>Owner can read and write. Group and others have no permission. <td>
+</tr>
+<tr>
+<td>-rw-r--r--</td>
+<td>644</td>
+<td>Owner and read and write. Group and others have read only rights.</td>
+</tr>
+<tr>
+<td>-rw-rw-rw-</td>
+<td>666</td>
+<td>Owner, group and others can read and write.</td>
+</tr>
+<tr>
+<td>-rwx--</td>
+<td>700</td>
+<td>Owner can read, write and execute. Group and others have none.</td>
+</tr>
+<tr>
+<td>-rwx--x--x</td>
+<td>711</td><td>Owner can read, write and execute. Group and others can execute.</td></tr>
+<tr><td>-rwxr-xr-x</td>
+<td>755</td><td>Owner can read, write and execute. Group and others can read and execute.</td></tr>
+<tr><td>-rwxrwxrwx</td><td>777</td><td>	Owner, group and others can read, write and execute.</td></tr>
+<tr><td>-drwx--</td><td>700</td><td>Only owner can read and write to the directory</td></tr>
+<tr><td>drwxr-xr-x/td><td>755</td><td>Owner, group and others can read the directory, but only the owner can write.</td></tr>
+</table>
+Example: 
+<pre id="CB">
+┌──(username㉿computername)-[~]
+└─$ ls -la
+total 88
+drwx------ 11 user1  user1   4096 Feb 16 19:50 .
+drwxr-xr-x  3 root   root    4096 Feb  7 12:55 ..
+-rw-------  1 user1  user1   6715 Feb 17 13:14 .bash_history
+-rw-r--r--  1 user1  user1    220 Feb  7 12:55 .bash_logout
+-rw-r--r--  1 user1  user1   5551 Feb  7 12:55 .bashrc
+-rw-r--r--  1 user1  user1   3526 Feb  7 12:55 .bashrc.original
+drwxr-xr-x  2 user1  user1   4096 Feb  7 13:33 Bin
+drwxr-xr-x  3 user1  user1   4096 Feb  7 13:26 .cache
+drwxr-xr-x  3 user1  user1   4096 Feb  7 12:55 .config
+drwxr-xr-x  3 user1  user1   4096 Feb 16 19:50 Desktop
+drwxr-xr-x  3 user1  user1   4096 Feb 16 12:48 Documents
+-rw-r--r--  1 user1  user1      0 Feb 13 09:15 .hushlogin
+drwxr-xr-x  3 user1  user1   4096 Feb  7 12:55 .java
+drwxr-xr-x  3 user1  user1   4096 Feb  7 13:18 .local </pre>
+</div><div>
+
+<!-- Section 2 --> 
+<div class="w3-content w3-justify w3-text-white w3-padding-10">
+<p> <h3>If you are still confused.</h3> <br>
+1st understand how we get the individual numbers that make up the 3 in total.<br>
+For the example: chown 644 filename.txt <br>
+The simple equation is a+b+c = the permission number.
+Which the 1st permission number is 6.<br>
+The formula is a=1 which is read permissions, b=2 which is write permissions,
+and c=4 which is execute permission. <br>
+So if 4+2=6 then the owner has rw or read write permissions indicated in the 1st slot with the 6. <br>
+The next two numbers are 4 and 4. Indicating the group permissions, and the permissions of others. <br>
+The ony way to get 4 out of (1,2,4) is to use 4. As above reads 4=execution permissions then both the group and other will have execute permissions. <br>
+Note: be careful of who or what has 777 permissions.
+ </p></br>
+ 
+ <h3> Administrative assisting commands</h3>
+<p> You'll likly use a lost of commands on this page when administering, these cmds will assist in the efforts of finding, knowing, doing</p>  
+ <!-- Section 1-->
+<ol>
+<li> Find a cmd with out leaving the terminal open an application how-to manual
+	<pre id="CB">man</pre></li>
+<!-- Section 9-->
+<li> List all additional command switches list only "AVALIABLE"program commands. Try this after typing parts of a command or program name
+	<pre id="CB"> -h </pre>
+	<p> Some programs may requier you to use the below</p>
+	<pre id="CB"> --help</pre></li>
+<li>Figure out who you are. Tells you what account you are using. Useful when piviting or switching to root
+	<pre id="CB">whoami</pre></li>
+	<!-- Section 4-->
+<li> Audit or trouble shoot commands List all recent terminal commands, pipe it to a .txt file for convience
+	<pre id="CB">history</pre></li>
+	Show all installed apps from apt 
+	<pre id="CB">history | grep -w install</pre></li>
+<!-- Section 11-->
+<li>Find out current app version and info list app ver., dependencies,size, <br> dev source,description,websiteuse to verify app integrity or for <br> unknown pkgs, incert app name where it says appname
+	<pre id="CB"> apt show appname</pre><li>
+<!-- Section 13-->
+<li>Find out info on file system shows disk space or all partitions
+	<pre id="CB">df <br> df -h </pre></li>
+<!-- Section 14-->
+<li> Find disk usage for a directory displays disk usage
+	<pre id="CB">du <br> du /etc/usr </pre></li>
+<!-- Section 15-->
+<li> Find all system info best for determining kernel ver.
+	<pre id="CB"> uname -a </pre></li>
+<!-- Section 16-->
+<li>Show free/used memory shows system memory
+	<pre id="CB">free <br> use (free -m) for mb </pre></li>
+<!-- Section 17-->
+<li>Kill a Process or Program, example Kill -9 1043. Use netstat -ano to get a list of processes
+	<pre id="CB">  netstat -ano <br>kill -9 Process#goeshere</pre></li>	
+<!-- Section 18-->
+<li>Append a command to current command; exapmple: mkdir TempDirectoty && cp newfile.txt ~/TempDirectoty/
+	<pre id="CB"> sudo comand 1 && sudo command 2</pre></li>
+<!-- Section 19-->
+<li>Stop termminal scrolling after command. exampple: last | more
+	<pre id="CB">command | more</pre></li>
+<p> Understanding the below will aid you when using a command such as above or most commands for the mattter, but you want to save the results to a txt file for later use.</p>
+<li> Output cmd results to file.  <em>example:ip addr | cat > myadress.txt 
+<br> the | allows you to combine commands</li> </em><br>
+The below sends the results of the netstat -ano command to a new fail called filename.txt 
+<br> The >> is used to pipe the command. Only 1 > is needed. 
+<br> 2 >> will apend to the end of the file instead of overwriting the file. Just make >> a habbit.
+<pre id="CB">netstat -ano >> filename.txt </pre>
+If you want to verify the output run or just read the contents of the file you created: 
+<pre id="CB">cat filename.txt</pre> 
+Now lets add both commands together 
+<pre id="CB">netstat -ano >> filename.txt | cat file.txt</pre></li>
+<li>
+Include a file path infornt of the file name to send the results to a diffrent directory. 
+<pre id="CB">netstat -ano >> /home/yourusernamehere/Desktop/filename.txt</pre>
+The above dose the same but send the file to your desktop <br>
+If the file is really long and can't be read in the terminal press the up arrow once, and add | less 
+<pre id="CB">netstat -ano >> /home/yourusernamehere/Desktop/filename.txt | less</pre></li>
+<!-- Section 20--> 
+<li> In some cases you may want to see the processes taking place or out put of the command you entered.
+<pre id="CB">--verbose <br>or <br> -v </pre> added to the end of a command will in most cases allow you to view whats happaning.</li>
+</ol>
+</div>
+<!-- End od Administration Section -->
+<hr>
+<!-- Networking Section-->
+<div class="w3-content w3-justify w3-text-white w3-padding-10" id="Networking">
+<h2> Networking Commands</h2>
+<br>
+<h3>Task Comments Command</h3>
+<!-- Section 1-->
+<ol>
+<li>Fix Time Sync Issues Updates Network Time Protocol Services 
+<pre id="CB">sudo apt-get install ntpdate <br>sudo ntpdate in.pool.ntp.org <br>sudo dpkg-reconfigure tzdata <br></pre></li>
+<!-- Section 2-->
+<li> List all network data gives IPs eth and network info
+	<pre id="CB">apt install net-tools<br>ifconfig </pre></li>
+<!-- Section 5 -->
+<li> Find current ip address and interfaces shows wlan0, eth0, lo, docker0. Also shows if they are up or down
+	<pre id="CB"> ip addr</pre></li>
+<!-- Section 6-->
+<li> Find out processes and process ID Shows all live processes form the terminal. Not standard check for instalation.
+	<pre id="CB">apt install htop <br>htop</pre><p> Better Terminal based representation simular to htop</p><pre id="CB">apt install htop <br> btop</pre></li>
+<!-- Section 7-->
+<li> show local ports protocals IP addresses and connectin paths shows active internet connections(servers and established). Usful for determining what processes and connections to kill
+	<pre id="CB">netstat -ano </pre></li>
+<!-- Section --> 
+<li>Verify DNS
+	 <pre ="CB">cat /etc/resolv.conf</pre></li>
+<!-- Section-->
+<li>Verify routs
+	  <pre id="CB">route 1 <br1>or<br>iptables -nl</pre></li>
+<!-- Section --> 
+<li>Check if host is on deny list
+	  <pre ="CB">cat /etc/host.deny</pre></li>
+<!-- Section --> 
+<li>Fix Memory issues in linux
+            <li><pre =id"CB">echo 3 > /prpc/sys/vm/drop_caches</pre></li>
+</ol>
+</div>
+</div>
+<!-- End of Networking Section-->
+<hr>
+<!-- Firewall Section-->
+<div class="w3-content w3-justify w3-text-white w3-padding-10" id="UFW">
+<h2> UFW Firewall</h2>
+<br>
+
+<h2> Firewall</h2>
+<p>Advantages of Using UFW Over Iptables:
+<
+<ul>
+<li><em>Intuitive Syntax:</em> UFW, short for Uncomplicated Firewall, boasts a user-friendly syntax. This simplicity allows users to effortlessly define rules, such as “ufw allow ssh” or “ufw deny http”, eliminating the need for intricate iptables commands.</li>
+<li><em>Pre-configured Defaults:</em> UFW comes equipped with default settings that strike a balance between security and functionality. Essential services like SSH and DNS operate unhindered, reducing potential misconfigurations.</li>
+<li><em>Efficient Logging:</em> With its integrated logging capabilities, UFW enables users to keep a vigilant eye on network traffic, aiding in identifying potential security anomalies.</li>
+<li><em>Seamless Debian Integration:</em> As Debian’s default firewall solution, UFW seamlessly integrates with the system’s components. This integration facilitates easy installation and management via Debian’s package management tools.</li>
+<li><em>Iptables Compatibility:</em> Operating with iptables as its backbone, UFW ensures full compatibility with iptables rules, allowing users acquainted with iptables to transition their rules to UFW without losing functionality.</li>
+</p>
+</ul>
+<h3> Install and configure UFW</h3>
+<pre ="CB"> 
+sudo apt update && sudo apt upgrade
+sudo apt install ufw -y
+</pre>
+enable UFW on start up
+<pre ="CB">
+sudo ufw enable<br>or<br>
+sudo systemctl enable ufw --now  </pre></li>
+Check the status
+<pre ="CB">systemctl status ufw  </pre></li>
+Check networking status
+<pre ="CB">
+Commands:
+ enable                          enables the firewall
+ disable                         disables the firewall
+ default ARG                     set default policy
+ logging LEVEL                   set logging to LEVEL
+ allow ARGS                      add allow rule
+ deny ARGS                       add deny rule
+ reject ARGS                     add reject rule
+ limit ARGS                      add limit rule
+ delete RULE|NUM                 delete RULE
+ insert NUM RULE                 insert RULE at NUM
+ prepend RULE                    prepend RULE
+ route RULE                      add route RULE
+ route delete RULE|NUM           delete route RULE
+ route insert NUM RULE           insert route RULE at NUM
+ reload                          reload firewall
+ reset                           reset firewall
+ status                          show firewall status
+ status numbered                 show firewall status as numbered list of RULES
+ status verbose                  show verbose firewall status
+ show ARG                        show firewall report
+ version                         display version information
+
+Application profile commands:
+ app list                        list application profiles
+ app info PROFILE                show information on PROFILE
+ app update PROFILE              update PROFILE
+ app default ARG                 set default application policy
+</pre></li>
+
+<li>Replace [application] with the application name you want to learn more about. This command will provide a brief description of the application, as well as the ports it uses. This is helpful when investigating open ports and trying to determine what application they belong to.
+	<pre ="CB">sudo ufw app info [application]</pre></li>
+<li>allow portocol example: ssh 
+	<pre ="CB">sudo ufw allow ssh</pre></li>
+<li>Allow prtocol with specific port number from the default port
+	<pre ="CB">sudo ufw allow 2222/ssh</pre></li>
+<li>Block portocol over tcp and allow local example: ssh 
+	<pre ="CB">sudo ufw deny ssh/tcp</pre></li>
+<li>Allow by application name and service
+	<pre ="CB">sudo ufw allow 'Nginx HTTP</pre></li>
+<li>Allow by service
+	<pre ="CB">sudo ufw allow http </pre></li>
+<li>Allow by IP
+<pre id="CB">sudo ufw allow from 192.168.5.1</pre></li>
+<li>Allow by IP with specified port
+<pre id="CB">sudo ufw allow from 192.168.5.1 to any port 3900</pre></li>
+<p> replace allow with deny in above to get the opposit affect</p>
+<li>view UFW file and delete rule 
+	<pre ="CB">sudo cat /etc/default/ufw <br>sudo ufw delete [rule number]</pre></li>
+<li> Set UFW to logging, replace [level] with low , medium , high , off
+	<pre id="CB">sudo ufw logging [level]</pre>
+<li>View the last 30 lines of the UFW log
+	<pre id="CB">sudo ufw tail /var/log/ufw.log -n 30</pre>
+<li> Reset the UFW afte you jacked it all up
+	<pre id="CB">sudo ufw reset</pre>
+</ol>
+</div>
+</div>
+<!-- End of Firewall Section-->
+<hr>
+<!-- SSH Section -->
+<div class="w3-content w3-justify w3-text-white w3-padding-64" id="Files">
+<div><hr>
+<h2>All About Secure Shell "SSH"</h2>
+<br>
+<!-- Section 1-->
+<h3>Installing SSH</h3>
+<br>
+<!-- Section 2-->
+<h3>Verify ssh </h3> 
+	 Verify ssh is enabled
+	 <pre id="CB">sudo systemctl list-unit-files | grep enabled | grep ssh</pre>
+	 <pre id="CB">sudo systemctl status ssh</pre>
+	 Check ssh config file</br>
+	 <pre id="CB">sudo cat /etc/ssh/sshd_config</pre>
+	  <pre id="CB">grep Port /etc/ssh/sshd_config</pre>
+	 Restart SSH
+     <pre id="CB">sudo systemctl reload ssh</pre>
+	 or
+	 <pre id="CB">sudo /etc/init.d/ssh start</pre>
+	 Reload SSH in WSL
+	 <pre id="CB">sudo /etc/init.d/ssh reload</pre>
+<!-- Section 3-->
+</div>
+</div>
+<!-- Do not edit Below --> 
+ <hr style="width:100%" class="w3-opacity">
+    <!-- Footer -->
+  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge" cstyle="width:100%">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <p class="w3-medium">Networking Technology + Support (c)2024 All Rights Reserved.</p>
+  <!-- End footer -->
+  </footer>
+
+<!-- END PAGE CONTENT -->
+
+
+</body>
+</html>
