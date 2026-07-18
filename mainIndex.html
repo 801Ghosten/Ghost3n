@@ -1,0 +1,2588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Lab Command Center</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <aside class="sidebar panel" aria-label="Lab navigation">
+    <header class="brand">
+      <span class="status-dot" aria-hidden="true"></span>
+      <div>
+        <p class="eyebrow">OPERATIONS</p>
+        <h1>Lab Command Center</h1>
+      </div>
+    </header>
+
+    <nav class="lab-menu">
+      <details class="nav-group" open>
+        <summary>Lab 1 — Home</summary>
+        <div class="nav-links">
+          <a href="https://192.168.1.219:9090">Cockpit</a>
+          <a href="https://192.168.1.219:9443">Portainer</a>
+          <a href="http://192.168.1.220/admin/">Pi-hole</a>
+          <a href="http://192.168.1.219:81">Proxy Manager</a>
+          <a href="https://192.168.1.219:5601">Wazuh</a>
+          <a href="http://192.168.1.219:8080">Watchtower</a>
+          <a href="http://192.168.1.200:11434">Ollama API</a>
+          <a href="http://192.168.1.219:3000">Open WebUI</a>
+          <a href="http://192.168.1.219:8096">Jellyfin</a>
+        </div>
+      </details>
+
+      <details class="nav-group">
+        <summary>Lab 2 — Secondary</summary>
+        <div class="nav-links">
+          <a href="https://192.168.1.200:9090">Cockpit</a>
+          <a href="https://192.168.1.200:9443">Portainer</a>
+          <a href="http://192.168.1.200/admin/">Pi-hole</a>
+          <a href="http://192.168.1.200:81">Proxy Manager</a>
+          <a href="https://192.168.1.200:5601">Wazuh</a>
+          <a href="http://192.168.1.200:8080">Watchtower</a>
+          <a href="http://192.168.1.200:11434">Ollama API</a>
+          <a href="http://192.168.1.200:3000">Open WebUI</a>
+          <a href="http://192.168.1.200:5003">GroqCloud Proxy</a>
+          <a href="http://192.168.1.200:5001">Baseten Proxy</a>
+          <a href="http://192.168.1.200:8888">Caldera</a>
+          <a href="http://192.168.1.200:9999">GitLab Internal</a>
+        </div>
+      </details>
+
+      <details class="nav-group">
+        <summary>Lab 3 — Training Range</summary>
+        <div class="nav-links">
+          <h2>Network</h2>
+          <a href="https://192.168.1.1">Router 2</a>
+          <a href="https://192.168.1.2">Router 1</a>
+          <a href="https://192.168.1.1">Access Point 1</a>
+          <a href="https://192.168.1.1">Access Point 2</a>
+          <a href="http://127.0.0.1:8080">Local Web</a>
+
+          <h2>Cockpit</h2>
+          <a href="https://192.168.1.102:9090">Red Server</a>
+          <a href="https://192.168.1.105:9090">Blue Server</a>
+          <a href="https://192.168.1.103:9090">Grey Server</a>
+
+          <h2>Portainer</h2>
+          <a href="https://192.168.1.102:9443">Red Portainer</a>
+          <a href="https://192.168.1.105:9443">Blue Portainer</a>
+          <a href="https://192.168.1.103:9443">Grey Portainer</a>
+
+          <h2>Dashboards</h2>
+          <a href="https://192.168.1.102:9090">Red Dashboard</a>
+          <a href="https://192.168.1.105:9090">Blue Dashboard</a>
+          <a href="https://192.168.1.103:9090">Grey Dashboard</a>
+
+          <h2>Other</h2>
+          <a href="http://192.168.1.105:8096">Training Library</a>
+          <a href="https://192.168.1.105:5601">Wazuh</a>
+          <a href="http://192.168.1.101:8888">Caldera</a>
+          <a href="https://github.com/login">GitHub</a>
+
+          <h2>Samba</h2>
+          <a href="file://192.168.1.105/Training-Backups/">Training Backups</a>
+          <a href="file://192.168.1.105/Host-Backups/">Host Backups</a>
+          <a href="file://192.168.1.105/TrainingLab/">Training Lab</a>
+        </div>
+      </details>
+
+      <a class="resource-jump" href="#resources">Cyber Resource Matrix</a>
+      <a class="resource-jump" href="#osint-resources">OSINT Resource Matrix</a>
+      <a class="resource-jump" href="#osint-library">Complete OSINT Library</a>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <section class="hero panel">
+      <p class="eyebrow">QUICK ACCESS // REFERENCE</p>
+      <h2>Cyber Sites Master List</h2>
+      <p>Training, AI, red-team and blue-team resources in one responsive table.</p>
+      <div class="stack-tags" aria-label="Topics">
+        <span>Linux</span><span>Windows</span><span>Red Hat</span><span>Docker</span>
+        <span>Python</span><span>Java</span><span>Go</span><span>Rust</span><span>C++</span>
+      </div>
+    </section>
+
+    <section id="resources" class="resource-section panel" aria-labelledby="resources-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">PUBLIC RESOURCES</p>
+          <h2 id="resources-title">Cyber Resource Matrix</h2>
+        </div>
+        <span class="live-badge">LINKS READY</span>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Training</th>
+              <th scope="col">AI</th>
+              <th scope="col">Red Team</th>
+              <th scope="col">Blue Team</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="https://tryhackme.com/">TryHackMe</a></td>
+              <td><a href="https://ollama.com/">Ollama</a></td>
+              <td><a href="https://www.kali.org/">Kali Linux</a></td>
+              <td><a href="https://wazuh.com/">Wazuh</a></td>
+            </tr>
+            <tr>
+              <td><a href="https://academy.hackthebox.com/">Hack The Box Academy</a></td>
+              <td><a href="https://docs.openwebui.com/">Open WebUI</a></td>
+              <td><a href="https://attack.mitre.org/">MITRE ATT&amp;CK</a></td>
+              <td><a href="https://securityonionsolutions.com/software/">Security Onion</a></td>
+            </tr>
+            <tr>
+              <td><a href="https://portswigger.net/web-security">PortSwigger Academy</a></td>
+              <td><a href="https://huggingface.co/">Hugging Face</a></td>
+              <td><a href="https://github.com/apache/caldera">Caldera</a></td>
+              <td><a href="https://zeek.org/">Zeek</a></td>
+            </tr>
+            <tr>
+              <td><a href="https://overthewire.org/wargames/">OverTheWire</a></td>
+              <td><a href="https://www.langchain.com/">LangChain</a></td>
+              <td><a href="https://www.atomicredteam.io/">Atomic Red Team</a></td>
+              <td><a href="https://suricata.io/">Suricata</a></td>
+            </tr>
+            <tr>
+              <td><a href="https://skillsforall.com/">Cisco Skills for All</a></td>
+              <td><a href="https://docs.llamaindex.ai/">LlamaIndex</a></td>
+              <td><a href="https://docs.metasploit.com/">Metasploit Docs</a></td>
+              <td><a href="https://sigmahq.io/">Sigma</a></td>
+            </tr>
+            <tr>
+              <td><a href="https://learn.microsoft.com/training/">Microsoft Learn</a></td>
+              <td><a href="https://docs.vllm.ai/">vLLM</a></td>
+              <td><a href="https://nmap.org/">Nmap</a></td>
+              <td><a href="https://virustotal.github.io/yara/">YARA</a></td>
+            </tr>
+            <tr>
+              <td><a href="https://training.linuxfoundation.org/">Linux Foundation</a></td>
+              <td><a href="https://platform.openai.com/docs/">OpenAI API Docs</a></td>
+              <td><a href="https://bloodhound.specterops.io/">BloodHound</a></td>
+              <td><a href="https://docs.velociraptor.app/">Velociraptor</a></td>
+            </tr>
+            <tr>
+              <td><a href="https://www.redhat.com/en/services/training-and-certification">Red Hat Training</a></td>
+              <td><a href="https://docs.anthropic.com/">Anthropic Docs</a></td>
+              <td><a href="https://github.com/fortra/impacket">Impacket</a></td>
+              <td><a href="https://learn.microsoft.com/sysinternals/downloads/sysmon">Sysmon</a></td>
+            </tr>
+            <tr>
+              <td><a href="https://docs.docker.com/get-started/">Docker Get Started</a></td>
+              <td><a href="https://docs.mistral.ai/">Mistral AI Docs</a></td>
+              <td><a href="https://owasp.org/www-project-web-security-testing-guide/">OWASP WSTG</a></td>
+              <td><a href="https://www.elastic.co/security">Elastic Security</a></td>
+            </tr>
+            <tr>
+              <td><a href="https://docs.python.org/3/tutorial/">Python Tutorial</a></td>
+              <td><a href="https://aistudio.google.com/">Google AI Studio</a></td>
+              <td><a href="https://github.com/swisskyrepo/PayloadsAllTheThings">PayloadsAllTheThings</a></td>
+              <td><a href="https://cyberdefenders.org/">CyberDefenders</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="osint-resources" class="resource-section panel" aria-labelledby="osint-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">OPEN-SOURCE INTELLIGENCE</p>
+          <h2 id="osint-title">OSINT Resource Matrix</h2>
+        </div>
+        <a class="live-badge master-link" href="https://start.me/p/rx6Qj8/nixintel-s-osint-resource-list">OPEN NIXINTEL LIST</a>
+      </div>
+
+      <p class="section-note">
+        A clean launcher for the Nixintel collection and commonly used OSINT resources. Use these tools only for lawful, authorized research.
+      </p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Collections &amp; Training</th>
+              <th scope="col">People &amp; Accounts</th>
+              <th scope="col">Domains &amp; Infrastructure</th>
+              <th scope="col">Media, Maps &amp; Archives</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="https://start.me/p/rx6Qj8/nixintel-s-osint-resource-list">Nixintel OSINT Resource List</a></td>
+              <td><a href="https://whatsmyname.app/">WhatsMyName</a></td>
+              <td><a href="https://www.shodan.io/">Shodan</a></td>
+              <td><a href="https://web.archive.org/">Wayback Machine</a></td>
+            </tr>
+            <tr>
+              <td><a href="https://osintframework.com/">OSINT Framework</a></td>
+              <td><a href="https://github.com/sherlock-project/sherlock">Sherlock</a></td>
+              <td><a href="https://search.censys.io/">Censys Search</a></td>
+              <td><a href="https://archive.ph/">Archive.today</a></td>
+            </tr>
+            <tr>
+              <td><a href="https://bellingcat.gitbook.io/toolkit/">Bellingcat Online Investigation Toolkit</a></td>
+              <td><a href="https://epieos.com/">Epieos</a></td>
+              <td><a href="https://urlscan.io/">urlscan.io</a></td>
+              <td><a href="https://tineye.com/">TinEye</a></td>
+            </tr>
+            <tr>
+              <td><a href="https://inteltechniques.com/tools/">IntelTechniques Search Tools</a></td>
+              <td><a href="https://haveibeenpwned.com/">Have I Been Pwned</a></td>
+              <td><a href="https://www.virustotal.com/gui/home/search">VirusTotal Search</a></td>
+              <td><a href="https://lens.google.com/">Google Lens</a></td>
+            </tr>
+            <tr>
+              <td><a href="https://www.osintcombine.com/tools">OSINT Combine Tools</a></td>
+              <td><a href="https://namechk.com/">Namechk</a></td>
+              <td><a href="https://crt.sh/">crt.sh Certificate Search</a></td>
+              <td><a href="https://yandex.com/images/">Yandex Image Search</a></td>
+            </tr>
+            <tr>
+              <td><a href="https://github.com/jivoi/awesome-osint">Awesome OSINT</a></td>
+              <td><a href="https://keybase.io/">Keybase</a></td>
+              <td><a href="https://dnsdumpster.com/">DNSDumpster</a></td>
+              <td><a href="https://exiftool.org/">ExifTool</a></td>
+            </tr>
+            <tr>
+              <td><a href="https://www.osintdojo.com/resources/">OSINT Dojo Resources</a></td>
+              <td><a href="https://gravatar.com/">Gravatar</a></td>
+              <td><a href="https://viewdns.info/">ViewDNS.info</a></td>
+              <td><a href="https://www.suncalc.org/">SunCalc</a></td>
+            </tr>
+            <tr>
+              <td><a href="https://www.osintcurio.us/">OSINT Curious</a></td>
+              <td><a href="https://hunter.io/">Hunter</a></td>
+              <td><a href="https://builtwith.com/">BuiltWith</a></td>
+              <td><a href="https://earth.google.com/web/">Google Earth</a></td>
+            </tr>
+            <tr>
+              <td><a href="https://start.me/p/DPYPMz/the-ultimate-osint-collection">Ultimate OSINT Collection</a></td>
+              <td><a href="https://github.com/mxrch/GHunt">GHunt</a></td>
+              <td><a href="https://sitereport.netcraft.com/">Netcraft Site Report</a></td>
+              <td><a href="https://www.mapillary.com/app/">Mapillary</a></td>
+            </tr>
+            <tr>
+              <td><a href="https://nixintel.info/tag/osint-tools/">Nixintel OSINT Articles</a></td>
+              <td><a href="https://www.social-searcher.com/">Social Searcher</a></td>
+              <td><a href="https://www.securitytrails.com/">SecurityTrails</a></td>
+              <td><a href="https://fotoforensics.com/">FotoForensics</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+
+    <section id="osint-library" class="resource-section panel" aria-labelledby="osint-library-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">COMPLETE IMPORT</p>
+          <h2 id="osint-library-title">Nixintel OSINT Link Library</h2>
+        </div>
+        <span class="live-badge">403 DIRECT LINKS</span>
+      </div>
+      <p class="section-note">Every unique link from the uploaded export is stored directly in this dashboard. Search by resource name, description, or domain.</p>
+      <div class="library-toolbar" role="search">
+        <label class="search-box" for="osint-search">
+          <span>Search OSINT library</span>
+          <input id="osint-search" type="search" autocomplete="off" placeholder="Example: maps, username, archive, domain...">
+        </label>
+        <div class="library-actions">
+          <button id="osint-clear" type="button">Clear</button>
+          <button id="osint-expand" type="button" aria-pressed="false">Expand all</button>
+          <output id="osint-count" for="osint-search">403 of 403 links</output>
+        </div>
+      </div>
+      <div id="osint-groups" class="alpha-groups">
+        <details class="alpha-group" data-group="A" open>
+          <summary><span>A</span><span class="group-count">21 links</span></summary>
+          <div class="table-wrap library-table-wrap">
+            <table class="osint-table">
+              <thead><tr><th scope="col">Resource</th><th scope="col">Description</th><th scope="col">Domain</th></tr></thead>
+              <tbody>
+                <tr class="osint-row" data-search="abc telefonos - spanish phone/company info  abctelefonos.com https://www.abctelefonos.com/">
+                  <td><a href="https://www.abctelefonos.com/">abc telefonos - Spanish Phone/Company info</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>abctelefonos.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="abuseipdb  abuseipdb.com https://www.abuseipdb.com/">
+                  <td><a href="https://www.abuseipdb.com/">AbuseIPDB</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>abuseipdb.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="act emergency services agency (aus)  esa.act.gov.au https://esa.act.gov.au/?fullmap=true">
+                  <td><a href="https://esa.act.gov.au/?fullmap=true">ACT Emergency Services Agency (Aus)</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>esa.act.gov.au</code></td>
+                </tr>
+                <tr class="osint-row" data-search="ads-b exchange – world&#x27;s largest co-op of unfiltered flight data  adsbexchange.com https://www.adsbexchange.com/">
+                  <td><a href="https://www.adsbexchange.com/">ADS-B Exchange – World&#x27;s largest co-op of unfiltered flight data</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>adsbexchange.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="ahmia — search tor hidden services ahmia.fi https://ahmia.fi/">
+                  <td><a href="https://ahmia.fi/">Ahmia —</a></td>
+                  <td><p class="resource-description">Search Tor Hidden Services</p></td>
+                  <td><code>ahmia.fi</code></td>
+                </tr>
+                <tr class="osint-row" data-search="ai content detector the copyleaks ai content detector helps you know if what you’re reading was written by a person or generated by ai, including chatgpt. copyleaks.com https://copyleaks.com/ai-content-detector">
+                  <td><a href="https://copyleaks.com/ai-content-detector">AI Content Detector</a></td>
+                  <td><p class="resource-description">The Copyleaks AI Content Detector helps you know if what you’re reading was written by a person or generated by AI, including ChatGPT.</p></td>
+                  <td><code>copyleaks.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="ai or not leading ai detector with 100k+ users, ai or not checks for ai generated content in images, audio, kyc identity documents and more. aiornot.com https://www.aiornot.com/">
+                  <td><a href="https://www.aiornot.com/">AI Or Not</a></td>
+                  <td><p class="resource-description">Leading AI detector with 100k+ users, AI or Not checks for AI generated content in images, audio, KYC identity documents and more.</p></td>
+                  <td><code>aiornot.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="aio search  aiosearch.com http://www.aiosearch.com/">
+                  <td><a href="http://www.aiosearch.com/">AIO Search</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>aiosearch.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="alephdata (archive)  github.com https://github.com/alephdata/datadesktop/releases">
+                  <td><a href="https://github.com/alephdata/datadesktop/releases">AlephData (archive)</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>github.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="alienvault open threat exchange learn about the latest cyber threats. research, collaborate, and share threat intelligence in real time. protect yourself and the community against today&#x27;s emerging threats. otx.alienvault.com https://otx.alienvault.com/">
+                  <td><a href="https://otx.alienvault.com/">AlienVault Open Threat Exchange</a></td>
+                  <td><p class="resource-description">Learn about the latest cyber threats. Research, collaborate, and share threat intelligence in real time. Protect yourself and the community against today&#x27;s emerging threats.</p></td>
+                  <td><code>otx.alienvault.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="am i real? am i real? - image verification tool seintpl.github.io https://seintpl.github.io/amireal/">
+                  <td><a href="https://seintpl.github.io/AmIReal/">Am I Real?</a></td>
+                  <td><p class="resource-description">Am I Real? - image verification tool</p></td>
+                  <td><code>seintpl.github.io</code></td>
+                </tr>
+                <tr class="osint-row" data-search="amazon rekognition – video and image amazon rekognition automates image recognition and video analysis for your applications without machine learning (ml) experience. aws.amazon.com https://aws.amazon.com/rekognition/">
+                  <td><a href="https://aws.amazon.com/rekognition/">Amazon Rekognition – Video and Image</a></td>
+                  <td><p class="resource-description">Amazon Rekognition automates image recognition and video analysis for your applications without machine learning (ML) experience.</p></td>
+                  <td><code>aws.amazon.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="analyzeid reverse lookup google analytics, google adsense, amazon affiliates, emails, ips, and other third party ids. analyzeid.com https://analyzeid.com/">
+                  <td><a href="https://analyzeid.com/">Analyzeid</a></td>
+                  <td><p class="resource-description">Reverse lookup Google Analytics, Google Adsense, Amazon affiliates, Emails, IPs, and other third party IDs.</p></td>
+                  <td><code>analyzeid.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="annualreports.com  annualreports.com http://www.annualreports.com/">
+                  <td><a href="http://www.annualreports.com/">AnnualReports.com</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>annualreports.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="archive.is  archive.is https://archive.is/">
+                  <td><a href="https://archive.is/">archive.is</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>archive.is</code></td>
+                </tr>
+                <tr class="osint-row" data-search="archive.today  archive.today https://archive.today/">
+                  <td><a href="https://archive.today/">Archive.today</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>archive.today</code></td>
+                </tr>
+                <tr class="osint-row" data-search="archivebox 🗃 open source self-hosted web archiving. takes urls/browser history/bookmarks/pocket/pinboard/etc., saves html, js, pdfs, media, and more… archivebox.io https://archivebox.io/">
+                  <td><a href="https://archivebox.io/">ArchiveBox</a></td>
+                  <td><p class="resource-description">🗃 Open source self-hosted web archiving. Takes URLs/browser history/bookmarks/Pocket/Pinboard/etc., saves HTML, JS, PDFs, media, and more…</p></td>
+                  <td><code>archivebox.io</code></td>
+                </tr>
+                <tr class="osint-row" data-search="asic (australia)  asic.gov.au https://asic.gov.au/online-services/search-asics-registers/business-names/">
+                  <td><a href="https://asic.gov.au/online-services/search-asics-registers/business-names/">ASIC (Australia)</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>asic.gov.au</code></td>
+                </tr>
+                <tr class="osint-row" data-search="askmid - check car insurance details  askmid.com http://askmid.com/">
+                  <td><a href="http://askmid.com/">askMID - check car insurance details</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>askmid.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="avec copains (fr social network)  copainsdavant.linternaute.com https://copainsdavant.linternaute.com/">
+                  <td><a href="https://copainsdavant.linternaute.com/">Avec Copains (FR social network)</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>copainsdavant.linternaute.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="aware online crypto tools  aware-online.com https://www.aware-online.com/en/osint-tools/cryptocurrency-tools/">
+                  <td><a href="https://www.aware-online.com/en/osint-tools/cryptocurrency-tools/">Aware Online Crypto Tools</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>aware-online.com</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+        <details class="alpha-group" data-group="B">
+          <summary><span>B</span><span class="group-count">17 links</span></summary>
+          <div class="table-wrap library-table-wrap">
+            <table class="osint-table">
+              <thead><tr><th scope="col">Resource</th><th scope="col">Description</th><th scope="col">Domain</th></tr></thead>
+              <tbody>
+                <tr class="osint-row" data-search="bar code reader  online-barcode-reader.inliteresearch.com https://online-barcode-reader.inliteresearch.com/">
+                  <td><a href="https://online-barcode-reader.inliteresearch.com/">Bar Code Reader</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>online-barcode-reader.inliteresearch.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="belgian company info &amp; accounts  nbb.be https://www.nbb.be/en/central-balance-sheet-office">
+                  <td><a href="https://www.nbb.be/en/central-balance-sheet-office">Belgian Company Info &amp; Accounts</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>nbb.be</code></td>
+                </tr>
+                <tr class="osint-row" data-search="belgian phone book (dutch)  1207.be https://www.1207.be/">
+                  <td><a href="https://www.1207.be/">Belgian Phone Book (Dutch)</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>1207.be</code></td>
+                </tr>
+                <tr class="osint-row" data-search="belgian phone book (french)  1307.be https://www.1307.be/">
+                  <td><a href="https://www.1307.be/">Belgian Phone Book (French)</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>1307.be</code></td>
+                </tr>
+                <tr class="osint-row" data-search="bellingcat/instagram-location-search finds instagram location ids near a specified latitude and longitude. - bellingcat/instagram-location-search github.com https://github.com/bellingcat/instagram-location-search">
+                  <td><a href="https://github.com/bellingcat/instagram-location-search">bellingcat/instagram-location-search</a></td>
+                  <td><p class="resource-description">Finds Instagram location IDs near a specified latitude and longitude. - bellingcat/instagram-location-search</p></td>
+                  <td><code>github.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="bgp.he.net/  bgp.he.net https://bgp.he.net/">
+                  <td><a href="https://bgp.he.net/">bgp.he.net/</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>bgp.he.net</code></td>
+                </tr>
+                <tr class="osint-row" data-search="bgpview  bgpview.io https://bgpview.io/">
+                  <td><a href="https://bgpview.io/">BGPView</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>bgpview.io</code></td>
+                </tr>
+                <tr class="osint-row" data-search="big domain data download the largest whois database in the world with over 530 million domain names and 1.37 billion historical whois records. api access available. bigdomaindata.com https://www.bigdomaindata.com/">
+                  <td><a href="https://www.bigdomaindata.com/">Big Domain Data</a></td>
+                  <td><p class="resource-description">Download the largest WHOIS database in the world with over 530 Million domain names and 1.37 Billion Historical WHOIS records. API access available.</p></td>
+                  <td><code>bigdomaindata.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="bing maps  bing.com https://www.bing.com/maps?form=z9lh2">
+                  <td><a href="https://www.bing.com/maps?FORM=Z9LH2">Bing Maps</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>bing.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="bing visual search  bing.com https://www.bing.com/visualsearch">
+                  <td><a href="https://www.bing.com/visualsearch">Bing Visual Search</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>bing.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="binsearch -- usenet search engine  binsearch.info https://www.binsearch.info/">
+                  <td><a href="https://www.binsearch.info/">Binsearch -- Usenet search engine</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>binsearch.info</code></td>
+                </tr>
+                <tr class="osint-row" data-search="bitcoin address lookup, checker and alerts  bitcoinwhoswho.com http://bitcoinwhoswho.com/">
+                  <td><a href="http://bitcoinwhoswho.com/">Bitcoin Address Lookup, Checker and Alerts</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>bitcoinwhoswho.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="bitcoin block explorer  blockexplorer.com https://blockexplorer.com/">
+                  <td><a href="https://blockexplorer.com/">Bitcoin Block Explorer</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>blockexplorer.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="blockchain explorer  blockchain.info http://blockchain.info/">
+                  <td><a href="http://blockchain.info/">Blockchain Explorer</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>blockchain.info</code></td>
+                </tr>
+                <tr class="osint-row" data-search="builtwith web technology information profiler tool. find out what a website is built with. builtwith.com https://builtwith.com/">
+                  <td><a href="https://builtwith.com/">BuiltWith</a></td>
+                  <td><p class="resource-description">Web technology information profiler tool. Find out what a website is built with.</p></td>
+                  <td><code>builtwith.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="burial records, cremation records, grave maps, genealogy and ancestry at deceased online  deceasedonline.com https://www.deceasedonline.com/">
+                  <td><a href="https://www.deceasedonline.com/">Burial records, cremation records, grave maps, genealogy and ancestry at Deceased Online</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>deceasedonline.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="business intel (middle east &amp; africa)  cedar-rose.com https://www.cedar-rose.com/">
+                  <td><a href="https://www.cedar-rose.com/">Business Intel (Middle East &amp; Africa)</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>cedar-rose.com</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+        <details class="alpha-group" data-group="C">
+          <summary><span>C</span><span class="group-count">27 links</span></summary>
+          <div class="table-wrap library-table-wrap">
+            <table class="osint-table">
+              <thead><tr><th scope="col">Resource</th><th scope="col">Description</th><th scope="col">Domain</th></tr></thead>
+              <tbody>
+                <tr class="osint-row" data-search="cached views  cachedviews.com https://cachedviews.com/">
+                  <td><a href="https://cachedviews.com/">Cached Views</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>cachedviews.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="canadian legal information institute  canlii.org https://www.canlii.org/en/">
+                  <td><a href="https://www.canlii.org/en/">Canadian Legal Information Institute</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>canlii.org</code></td>
+                </tr>
+                <tr class="osint-row" data-search="carnet.ai car make/model recognition api with 97% accuracy carnet.ai https://carnet.ai/">
+                  <td><a href="https://carnet.ai/">Carnet.ai</a></td>
+                  <td><p class="resource-description">Car Make/Model Recognition API with 97% Accuracy</p></td>
+                  <td><code>carnet.ai</code></td>
+                </tr>
+                <tr class="osint-row" data-search="carrot2 clustering engine  search.carrot2.org https://search.carrot2.org/#/search/web">
+                  <td><a href="https://search.carrot2.org/#/search/web">Carrot2 Clustering Engine</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>search.carrot2.org</code></td>
+                </tr>
+                <tr class="osint-row" data-search="castellum.ai the most accurate, reliable and fastest financial crime prevention solution. don&#x27;t take our word for it, try it yourself. search sanctions, peps and 1000+ global watchlists in 100+ languages. castellum.ai https://www.castellum.ai/">
+                  <td><a href="https://www.castellum.ai/">Castellum.AI</a></td>
+                  <td><p class="resource-description">The most accurate, reliable and fastest financial crime prevention solution. Don&#x27;t take our word for it, try it yourself. Search sanctions, PEPs and 1000+ global watchlists in 100+ languages.</p></td>
+                  <td><code>castellum.ai</code></td>
+                </tr>
+                <tr class="osint-row" data-search="cavalier™ — by hudson rock — compromised credentials notifications &amp; data for threat intelligence professionals  hudsonrock.com https://www.hudsonrock.com/cavalier">
+                  <td><a href="https://www.hudsonrock.com/cavalier">Cavalier™ — by Hudson Rock — Compromised Credentials Notifications &amp; Data for Threat Intelligence Professionals</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>hudsonrock.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="censys  censys.io https://censys.io/">
+                  <td><a href="https://censys.io/">Censys</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>censys.io</code></td>
+                </tr>
+                <tr class="osint-row" data-search="centralops - traceroute, nslookup, dig, whois lookup, ping - ipv6  centralops.net https://centralops.net/co/">
+                  <td><a href="https://centralops.net/co/">CentralOps - traceroute, nslookup, dig, whois lookup, ping - IPv6</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>centralops.net</code></td>
+                </tr>
+                <tr class="osint-row" data-search="certificate search - crt.sh  crt.sh https://crt.sh/">
+                  <td><a href="https://crt.sh/">Certificate Search - crt.sh</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>crt.sh</code></td>
+                </tr>
+                <tr class="osint-row" data-search="chain abuse  chainabuse.com https://www.chainabuse.com/?bca=true&amp;utm_source=bitcoinabuse">
+                  <td><a href="https://www.chainabuse.com/?bca=true&amp;utm_source=bitcoinabuse">Chain Abuse</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>chainabuse.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="check the mot status of a vehicle  gov.uk https://www.gov.uk/check-mot-status">
+                  <td><a href="https://www.gov.uk/check-mot-status">Check the MOT status of a vehicle</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>gov.uk</code></td>
+                </tr>
+                <tr class="osint-row" data-search="christophetd/cloudflair  github.com https://github.com/christophetd/cloudflair">
+                  <td><a href="https://github.com/christophetd/CloudFlair">christophetd/CloudFlair</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>github.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="cirt - default passwords  cirt.net https://cirt.net/passwords">
+                  <td><a href="https://cirt.net/passwords">Cirt - Default Passwords</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>cirt.net</code></td>
+                </tr>
+                <tr class="osint-row" data-search="cleanup.pictures remove unwanted objects from photos, people, text, and defects from any picture for free. it&#x27;s extremely easy in just a few clicks with our creative editing tool. cleanup.pictures https://cleanup.pictures/">
+                  <td><a href="https://cleanup.pictures/">Cleanup.pictures</a></td>
+                  <td><p class="resource-description">Remove unwanted objects from photos, people, text, and defects from any picture for free. It&#x27;s extremely easy in just a few clicks with our creative editing tool.</p></td>
+                  <td><code>cleanup.pictures</code></td>
+                </tr>
+                <tr class="osint-row" data-search="cnmc - spanish phone operator lookup  numeracionyoperadores.cnmc.es https://numeracionyoperadores.cnmc.es/numeracion">
+                  <td><a href="https://numeracionyoperadores.cnmc.es/numeracion">CNMC - Spanish Phone Operator Lookup</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>numeracionyoperadores.cnmc.es</code></td>
+                </tr>
+                <tr class="osint-row" data-search="codelook  telecom-tariffs.co.uk https://www.telecom-tariffs.co.uk/codelook.htm">
+                  <td><a href="https://www.telecom-tariffs.co.uk/codelook.htm">CodeLook</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>telecom-tariffs.co.uk</code></td>
+                </tr>
+                <tr class="osint-row" data-search="companies house  gov.uk https://www.gov.uk/government/organisations/companies-house">
+                  <td><a href="https://www.gov.uk/government/organisations/companies-house">Companies House</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>gov.uk</code></td>
+                </tr>
+                <tr class="osint-row" data-search="companies house - overseas registries  gov.uk https://www.gov.uk/government/publications/overseas-registries/overseas-registries">
+                  <td><a href="https://www.gov.uk/government/publications/overseas-registries/overseas-registries">Companies House - Overseas registries</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>gov.uk</code></td>
+                </tr>
+                <tr class="osint-row" data-search="companiesintheuk  companiesintheuk.co.uk https://www.companiesintheuk.co.uk/">
+                  <td><a href="https://www.companiesintheuk.co.uk/">CompaniesInTheUK</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>companiesintheuk.co.uk</code></td>
+                </tr>
+                <tr class="osint-row" data-search="company &amp; people search (bulgaria)  papagal.bg https://papagal.bg/">
+                  <td><a href="https://papagal.bg/">Company &amp; People Search (Bulgaria)</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>papagal.bg</code></td>
+                </tr>
+                <tr class="osint-row" data-search="complete email header analysis. analyse, track ip here  iptrackeronline.com https://www.iptrackeronline.com/email-header-analysis.php">
+                  <td><a href="https://www.iptrackeronline.com/email-header-analysis.php">Complete email header analysis. Analyse, track ip here</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>iptrackeronline.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="completedns  completedns.com https://completedns.com/">
+                  <td><a href="https://completedns.com/">CompleteDNS</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>completedns.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="corporation wiki  corporationwiki.com https://www.corporationwiki.com/">
+                  <td><a href="https://www.corporationwiki.com/">Corporation Wiki</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>corporationwiki.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="corrections.com  corrections.com http://corrections.com/links/16">
+                  <td><a href="http://corrections.com/links/16">Corrections.com</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>corrections.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="crunchbase  crunchbase.com https://www.crunchbase.com/">
+                  <td><a href="https://www.crunchbase.com/">Crunchbase</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>crunchbase.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="cyberchef.io the cyber swiss army knife - a web app for encryption, encoding, compression and data analysis cyberchef.io https://cyberchef.io/">
+                  <td><a href="https://cyberchef.io/">Cyberchef.io</a></td>
+                  <td><p class="resource-description">The Cyber Swiss Army Knife - a web app for encryption, encoding, compression and data analysis</p></td>
+                  <td><code>cyberchef.io</code></td>
+                </tr>
+                <tr class="osint-row" data-search="czech mapping portal (cz)  en.mapy.cz http://en.mapy.cz/">
+                  <td><a href="http://en.mapy.cz/">Czech Mapping Portal (CZ)</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>en.mapy.cz</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+        <details class="alpha-group" data-group="D">
+          <summary><span>D</span><span class="group-count">23 links</span></summary>
+          <div class="table-wrap library-table-wrap">
+            <table class="osint-table">
+              <thead><tr><th scope="col">Resource</th><th scope="col">Description</th><th scope="col">Domain</th></tr></thead>
+              <tbody>
+                <tr class="osint-row" data-search="d&amp;b business directory  dnb.com https://www.dnb.com/business-directory.html">
+                  <td><a href="https://www.dnb.com/business-directory.html">D&amp;B Business Directory</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>dnb.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="darknetlive  darknetlive.com https://darknetlive.com/">
+                  <td><a href="https://darknetlive.com/">DarknetLive</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>darknetlive.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="das örtliche - german phone book  dasoertliche.de https://www.dasoertliche.de/">
+                  <td><a href="https://www.dasoertliche.de/">Das Örtliche - German Phone Book</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>dasoertliche.de</code></td>
+                </tr>
+                <tr class="osint-row" data-search="db timetable  bahn.com https://www.bahn.com/en/view/index.shtml">
+                  <td><a href="https://www.bahn.com/en/view/index.shtml">DB Timetable</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>bahn.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="db timetable archive  fernbahn.de https://www.fernbahn.de/datenbank/">
+                  <td><a href="https://www.fernbahn.de/datenbank/">DB Timetable Archive</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>fernbahn.de</code></td>
+                </tr>
+                <tr class="osint-row" data-search="death records (fr)  deces.matchid.io https://deces.matchid.io/search">
+                  <td><a href="https://deces.matchid.io/search">Death Records (FR)</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>deces.matchid.io</code></td>
+                </tr>
+                <tr class="osint-row" data-search="deepl translator translate texts &amp;amp; full document files instantly. accurate translations for individuals and teams. millions translate with deepl every day. deepl.com https://deepl.com/">
+                  <td><a href="https://deepl.com/">DeepL Translator</a></td>
+                  <td><p class="resource-description">Translate texts &amp;amp; full document files instantly. Accurate translations for individuals and Teams. Millions translate with DeepL every day.</p></td>
+                  <td><code>deepl.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="default router passwords  routerpasswords.com https://www.routerpasswords.com/">
+                  <td><a href="https://www.routerpasswords.com/">Default Router Passwords</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>routerpasswords.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="dehashed — #freethepassword  dehashed.com https://dehashed.com/">
+                  <td><a href="https://dehashed.com/">DeHashed — #FreeThePassword</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>dehashed.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="detect, analyze, and compare faces with amazon rekognition detect, analyze, and compare faces with amazon rekognition aws.amazon.com https://aws.amazon.com/getting-started/hands-on/detect-analyze-compare-faces-rekognition/">
+                  <td><a href="https://aws.amazon.com/getting-started/hands-on/detect-analyze-compare-faces-rekognition/">Detect, Analyze, and Compare Faces with Amazon Rekognition</a></td>
+                  <td><p class="resource-description">Detect, Analyze, and Compare Faces with Amazon Rekognition</p></td>
+                  <td><code>aws.amazon.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="disboard search disboard is the public discord server listing community. you can search discord servers by your interest like gaming, anime, music, etc. find and join some awesome servers listed here! disboard.org https://disboard.org/">
+                  <td><a href="https://disboard.org/">Disboard Search</a></td>
+                  <td><p class="resource-description">DISBOARD is the public Discord server listing community. You can search Discord servers by your interest like Gaming, Anime, Music, etc. Find and join some awesome servers listed here!</p></td>
+                  <td><code>disboard.org</code></td>
+                </tr>
+                <tr class="osint-row" data-search="discord history tracker discord history tracker - save history of discord servers and private conversations dht.chylex.com https://dht.chylex.com/">
+                  <td><a href="https://dht.chylex.com/">Discord History Tracker</a></td>
+                  <td><p class="resource-description">Discord History Tracker - Save history of Discord servers and private conversations</p></td>
+                  <td><code>dht.chylex.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="discord multi-tool atio is a aio script developed with python3. it gathers a total of 23 discord tools (including a rat, a raid tool, a token grabber, a crash video maker, etc). it has a pleasant and intuitive interface to facilitate the use of all with help and explanations for each of them. - github - astraadev/discord-all-tools-in-one: atio is a aio script developed with python3. it gathers a total of 23 discord tools (including a rat, a raid tool, a token grabber, a crash video maker, etc). it has a pleasant and intuitive interface to facilitate the use of all with help and explanations for each of them. github.com https://github.com/astraadev/discord-all-tools-in-one">
+                  <td><a href="https://github.com/AstraaDev/Discord-All-Tools-In-One">Discord Multi-Tool</a></td>
+                  <td><p class="resource-description">ATIO is a AIO Script Developed with Python3. It gathers a total of 23 Discord tools (including a RAT, a Raid Tool, a Token Grabber, a Crash Video Maker, etc). It has a pleasant and intuitive interface to facilitate the use of all with help and explanations for each of them. - GitHub - AstraaDev/Discord-All-Tools-In-One: ATIO is a AIO Script Developed with Python3. It gathers a total of 23 Discord tools (including a RAT, a Raid Tool, a Token Grabber, a Crash Video Maker, etc). It has a pleasant and intuitive interface to facilitate the use of all with help and explanations for each of them.</p></td>
+                  <td><code>github.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="dns blacklist information  dnsbl.info https://www.dnsbl.info/">
+                  <td><a href="https://www.dnsbl.info/">DNS Blacklist Information</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>dnsbl.info</code></td>
+                </tr>
+                <tr class="osint-row" data-search="dns twister  dnstwister.report https://dnstwister.report/">
+                  <td><a href="https://dnstwister.report/">DNS Twister</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>dnstwister.report</code></td>
+                </tr>
+                <tr class="osint-row" data-search="dnsdumpster  dnsdumpster.com https://dnsdumpster.com/">
+                  <td><a href="https://dnsdumpster.com/">dnsdumpster</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>dnsdumpster.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="dnslytics dnslytics provides the ultimate online investigation tool. see detailed information about every ip address, domain name and provider. perform network tests like dns lookup, email testing and whois ... dnslytics.com https://dnslytics.com/">
+                  <td><a href="https://dnslytics.com/">DNSLytics</a></td>
+                  <td><p class="resource-description">DNSlytics provides the ultimate online investigation tool. See detailed information about every IP address, domain name and provider. Perform network tests like DNS lookup, email testing and WHOIS ...</p></td>
+                  <td><code>dnslytics.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="domain iq analytics  domainiq.com https://www.domainiq.com/reverse_analytics">
+                  <td><a href="https://www.domainiq.com/reverse_analytics">Domain IQ Analytics</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>domainiq.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="domain tools  whois.domaintools.com https://whois.domaintools.com/">
+                  <td><a href="https://whois.domaintools.com/">Domain Tools</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>whois.domaintools.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="draw.io  draw.io https://www.draw.io/">
+                  <td><a href="https://www.draw.io/">Draw.io</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>draw.io</code></td>
+                </tr>
+                <tr class="osint-row" data-search="dual maps  data.mashedworld.com http://data.mashedworld.com/dualmaps/map.htm?x=-87.981906&amp;y=43.029482&amp;z=16&amp;gm=2&amp;ve=4&amp;gc=0&amp;bz=1&amp;bd=0&amp;mw=1&amp;mi=0&amp;mg=1&amp;mv=0">
+                  <td><a href="http://data.mashedworld.com/dualmaps/map.htm?x=-87.981906&amp;y=43.029482&amp;z=16&amp;gm=2&amp;ve=4&amp;gc=0&amp;bz=1&amp;bd=0&amp;mw=1&amp;mi=0&amp;mg=1&amp;mv=0">Dual Maps</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>data.mashedworld.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="duckduckgo  duckduckgo.com https://duckduckgo.com/">
+                  <td><a href="https://duckduckgo.com/">DuckDuckGo</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>duckduckgo.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="d﻿ark.fai﻿l: which darknet sites are online?  dark.fail https://dark.fail/">
+                  <td><a href="https://dark.fail/">d﻿ark.fai﻿l: Which darknet sites are online?</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>dark.fail</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+        <details class="alpha-group" data-group="E">
+          <summary><span>E</span><span class="group-count">18 links</span></summary>
+          <div class="table-wrap library-table-wrap">
+            <table class="osint-table">
+              <thead><tr><th scope="col">Resource</th><th scope="col">Description</th><th scope="col">Domain</th></tr></thead>
+              <tbody>
+                <tr class="osint-row" data-search="e-mailrep.io - simple email reputation  emailrep.io https://emailrep.io/">
+                  <td><a href="https://emailrep.io/">E-mailrep.io - Simple Email Reputation</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>emailrep.io</code></td>
+                </tr>
+                <tr class="osint-row" data-search="earthcam - webcam network  earthcam.com https://earthcam.com/">
+                  <td><a href="https://earthcam.com/">EarthCam - Webcam Network</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>earthcam.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="edgar sec filings  sec.gov https://www.sec.gov/edgar/searchedgar/companysearch.html">
+                  <td><a href="https://www.sec.gov/edgar/searchedgar/companysearch.html">EDGAR SEC Filings</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>sec.gov</code></td>
+                </tr>
+                <tr class="osint-row" data-search="editus phonebook (lux)  editus.lu https://www.editus.lu/en">
+                  <td><a href="https://www.editus.lu/en">Editus Phonebook (Lux)</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>editus.lu</code></td>
+                </tr>
+                <tr class="osint-row" data-search="edmo repository  edmo.eu https://edmo.eu/resources/repositories/repository-of-fact-checking-articles/">
+                  <td><a href="https://edmo.eu/resources/repositories/repository-of-fact-checking-articles/">EDMO Repository</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>edmo.eu</code></td>
+                </tr>
+                <tr class="osint-row" data-search="electoral rolls - genes reunited  genesreunited.co.uk https://www.genesreunited.co.uk/articles/world-records/full-list-of-united-kingdom-records/census-land-and-surveys/electoral-rolls">
+                  <td><a href="https://www.genesreunited.co.uk/articles/world-records/full-list-of-united-kingdom-records/census-land-and-surveys/electoral-rolls">Electoral Rolls - Genes Reunited</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>genesreunited.co.uk</code></td>
+                </tr>
+                <tr class="osint-row" data-search="email dossier  centralops.net https://centralops.net/co/emaildossier.aspx">
+                  <td><a href="https://centralops.net/co/emaildossier.aspx">Email Dossier</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>centralops.net</code></td>
+                </tr>
+                <tr class="osint-row" data-search="email format  email-format.com https://email-format.com/">
+                  <td><a href="https://email-format.com/">Email Format</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>email-format.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="email header analyzer, rfc822 parser  mxtoolbox.com https://mxtoolbox.com/emailheaders.aspx">
+                  <td><a href="https://mxtoolbox.com/EmailHeaders.aspx">Email Header Analyzer, RFC822 Parser</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>mxtoolbox.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="email verifier  hunter.io https://hunter.io/email-verifier">
+                  <td><a href="https://hunter.io/email-verifier">Email Verifier</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>hunter.io</code></td>
+                </tr>
+                <tr class="osint-row" data-search="emailable email verifier  emailable.com https://emailable.com/email-verifier/">
+                  <td><a href="https://emailable.com/email-verifier/">Emailable Email Verifier</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>emailable.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="eniro (swe)  eniro.se https://www.eniro.se/">
+                  <td><a href="https://www.eniro.se/">Eniro (SWE)</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>eniro.se</code></td>
+                </tr>
+                <tr class="osint-row" data-search="epieos an osint search engine that allows you to perform an email or a phone reverse lookup, find related google reviews, and many other things. epieos.com https://epieos.com/">
+                  <td><a href="https://epieos.com/">Epieos</a></td>
+                  <td><p class="resource-description">An OSINT search engine that allows you to perform an email or a phone reverse lookup, find related google reviews, and many other things.</p></td>
+                  <td><code>epieos.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="etools.ch - the transparent metasearch engine from switzerland  etools.ch https://etools.ch/">
+                  <td><a href="https://etools.ch/">eTools.ch - The Transparent Metasearch Engine from Switzerland</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>etools.ch</code></td>
+                </tr>
+                <tr class="osint-row" data-search="eu vs disinfo db  euvsdisinfo.eu https://euvsdisinfo.eu/disinformation-cases/">
+                  <td><a href="https://euvsdisinfo.eu/disinformation-cases/">EU vs Disinfo DB</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>euvsdisinfo.eu</code></td>
+                </tr>
+                <tr class="osint-row" data-search="eurid eurid is the registry manager of the .eu, .ею and .ευ domain names. eurid.eu https://eurid.eu/en/">
+                  <td><a href="https://eurid.eu/en/">EURid</a></td>
+                  <td><p class="resource-description">EURid is the registry manager of the .eu, .ею and .ευ domain names.</p></td>
+                  <td><code>eurid.eu</code></td>
+                </tr>
+                <tr class="osint-row" data-search="exonerator – tor node checker  exonerator.torproject.org https://exonerator.torproject.org/">
+                  <td><a href="https://exonerator.torproject.org/">ExoneraTor – Tor Node Checker</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>exonerator.torproject.org</code></td>
+                </tr>
+                <tr class="osint-row" data-search="exploitalert - database of exploits  exploitalert.com http://www.exploitalert.com/">
+                  <td><a href="http://www.exploitalert.com/">Exploitalert - database of exploits</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>exploitalert.com</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+        <details class="alpha-group" data-group="F">
+          <summary><span>F</span><span class="group-count">32 links</span></summary>
+          <div class="table-wrap library-table-wrap">
+            <table class="osint-table">
+              <thead><tr><th scope="col">Resource</th><th scope="col">Description</th><th scope="col">Domain</th></tr></thead>
+              <tbody>
+                <tr class="osint-row" data-search="f4map - interactive 3d map  demo.f4map.com https://demo.f4map.com/#camera.theta=0.9">
+                  <td><a href="https://demo.f4map.com/#camera.theta=0.9">F4map - Interactive 3D map</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>demo.f4map.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="face search • pimeyes pimeyes is an advanced face recognition search engine, a reverse image search tool, and a photo search mechanism used to find which websites publish your photos online. pimeyes.com https://pimeyes.com/en">
+                  <td><a href="https://pimeyes.com/en">Face search • PimEyes</a></td>
+                  <td><p class="resource-description">PimEyes is an advanced face recognition search engine, a reverse image search tool, and a photo search mechanism used to find which websites publish your photos online.</p></td>
+                  <td><code>pimeyes.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="facebook  facebook.com http://www.facebook.com/">
+                  <td><a href="http://www.facebook.com/">Facebook</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>facebook.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="facebook - who posted what? fb keyword search generator whopostedwhat.com https://whopostedwhat.com/">
+                  <td><a href="https://whopostedwhat.com/">Facebook - Who posted what?</a></td>
+                  <td><p class="resource-description">FB keyword search generator</p></td>
+                  <td><code>whopostedwhat.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="facebook ad library  facebook.com https://www.facebook.com/ads/library/">
+                  <td><a href="https://www.facebook.com/ads/library/">Facebook Ad Library</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>facebook.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="facebook id finder  randomtools.io https://randomtools.io/">
+                  <td><a href="https://randomtools.io/">Facebook ID Finder</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>randomtools.io</code></td>
+                </tr>
+                <tr class="osint-row" data-search="facecheck.id find anyone online with facecheck.id face recognition search engine. search for people by photo and verify you are talking to the person they claim to be. facecheck.id https://facecheck.id/">
+                  <td><a href="https://facecheck.id/">Facecheck.id</a></td>
+                  <td><p class="resource-description">Find anyone online with FaceCheck.ID face recognition search engine. Search for people by photo and verify you are talking to the person they claim to be.</p></td>
+                  <td><code>facecheck.id</code></td>
+                </tr>
+                <tr class="osint-row" data-search="fastfire/deepdarkcti collection of cyber threat intelligence sources from the deep and dark web - fastfire/deepdarkcti github.com https://github.com/fastfire/deepdarkcti">
+                  <td><a href="https://github.com/fastfire/deepdarkCTI">fastfire/deepdarkCTI</a></td>
+                  <td><p class="resource-description">Collection of Cyber Threat Intelligence sources from the deep and dark web - fastfire/deepdarkCTI</p></td>
+                  <td><code>github.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="fb breach checker check if your telephone number is present within the facebook data breach. haveibeenzuckered.com is a simple, secure and privacy-aware tool that does not store user-provided input. haveibeenzuckered.com https://haveibeenzuckered.com/">
+                  <td><a href="https://haveibeenzuckered.com/">FB Breach Checker</a></td>
+                  <td><p class="resource-description">Check if your telephone number is present within the Facebook data breach. HaveIBeenZuckered.com is a simple, secure and privacy-aware tool that does not store user-provided input.</p></td>
+                  <td><code>haveibeenzuckered.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="federal election commission  fec.gov https://www.fec.gov/">
+                  <td><a href="https://www.fec.gov/">Federal Election Commission</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>fec.gov</code></td>
+                </tr>
+                <tr class="osint-row" data-search="fightercontrol - index page  fightercontrol.co.uk https://www.fightercontrol.co.uk/forum/index.php">
+                  <td><a href="https://www.fightercontrol.co.uk/forum/index.php">FighterControl - Index page</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>fightercontrol.co.uk</code></td>
+                </tr>
+                <tr class="osint-row" data-search="find google photo album by user id  get.google.com https://get.google.com/albumarchive/userid">
+                  <td><a href="https://get.google.com/albumarchive/userID">Find Google Photo Album By User ID</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>get.google.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="find my facebook id  lookup-id.com https://lookup-id.com/">
+                  <td><a href="https://lookup-id.com/">Find my Facebook ID</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>lookup-id.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="finn.no - items/property for sale (no)  finn.no https://www.finn.no/">
+                  <td><a href="https://www.finn.no/">Finn.no - items/property for sale (NO)</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>finn.no</code></td>
+                </tr>
+                <tr class="osint-row" data-search="fixmystreet  fixmystreet.com https://www.fixmystreet.com/">
+                  <td><a href="https://www.fixmystreet.com/">FixMyStreet</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>fixmystreet.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="flightaware  flightaware.com https://flightaware.com/">
+                  <td><a href="https://flightaware.com/">FlightAware</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>flightaware.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="flightradar24  flightradar24.com https://www.flightradar24.com/">
+                  <td><a href="https://www.flightradar24.com/">Flightradar24</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>flightradar24.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="follow that page - web monitor: we send you an email when your favorite page has changed.  followthatpage.com https://followthatpage.com/">
+                  <td><a href="https://followthatpage.com/">Follow That Page - web monitor: we send you an email when your favorite page has changed.</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>followthatpage.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="foreign travel advice (uk gov)  gov.uk https://www.gov.uk/foreign-travel-advice">
+                  <td><a href="https://www.gov.uk/foreign-travel-advice">Foreign travel advice (UK Gov)</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>gov.uk</code></td>
+                </tr>
+                <tr class="osint-row" data-search="forensic osint forensic osint, a powerful chrome extension by forensic notes, offers advanced web artifact capture. led by osint expert ritu gill, it&#x27;s your essential tool for digital investigations.: forensicosint.com https://www.forensicosint.com/">
+                  <td><a href="https://www.forensicosint.com/">Forensic OSINT</a></td>
+                  <td><p class="resource-description">Forensic OSINT, a powerful Chrome extension by Forensic Notes, offers advanced web artifact capture. Led by OSINT expert Ritu Gill, it&#x27;s your essential tool for digital investigations.:</p></td>
+                  <td><code>forensicosint.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="forensically, free online photo forensics tools - 29a.ch  29a.ch https://29a.ch/photo-forensics/#forensic-magnifier">
+                  <td><a href="https://29a.ch/photo-forensics/#forensic-magnifier">Forensically, free online photo forensics tools - 29a.ch</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>29a.ch</code></td>
+                </tr>
+                <tr class="osint-row" data-search="forsint forsint is the perfect platform to help you create and maintain your investigation persona (sock puppets). forsint.com https://forsint.com/">
+                  <td><a href="https://forsint.com/">FORSINT</a></td>
+                  <td><p class="resource-description">FORSINT is the perfect platform to help you create and maintain your investigation persona (sock puppets).</p></td>
+                  <td><code>forsint.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="fotoforensics  fotoforensics.com http://fotoforensics.com/">
+                  <td><a href="http://fotoforensics.com/">FotoForensics</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>fotoforensics.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="fouanalytics  fouanalytics.com https://fouanalytics.com/">
+                  <td><a href="https://fouanalytics.com/">FouAnalytics</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>fouanalytics.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="free ai detector the ai detector, with an impressive 98% accuracy rate, checks between human and ai-generated content from chatgpt, gpt4, bard, claude, and gemini. contentatscale.ai https://contentatscale.ai/ai-content-detector/">
+                  <td><a href="https://contentatscale.ai/ai-content-detector/">Free AI Detector</a></td>
+                  <td><p class="resource-description">The AI Detector, with an impressive 98% accuracy rate, checks between human and AI-generated content from ChatGPT, GPT4, Bard, Claude, and Gemini.</p></td>
+                  <td><code>contentatscale.ai</code></td>
+                </tr>
+                <tr class="osint-row" data-search="free ais ship tracking of marine traffic  vesselfinder.com https://www.vesselfinder.com/">
+                  <td><a href="https://www.vesselfinder.com/">Free AIS Ship Tracking of Marine Traffic</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>vesselfinder.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="free census lookups (uk)  freecen.org.uk https://www.freecen.org.uk/">
+                  <td><a href="https://www.freecen.org.uk/">Free Census Lookups (UK)</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>freecen.org.uk</code></td>
+                </tr>
+                <tr class="osint-row" data-search="free email address validator  verifalia.com http://verifalia.com/validate-email/">
+                  <td><a href="http://verifalia.com/validate-email/">Free email address validator</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>verifalia.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="free map tools  freemaptools.com https://www.freemaptools.com/">
+                  <td><a href="https://www.freemaptools.com/">Free Map Tools</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>freemaptools.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="free uk bmd register  freebmd.org.uk https://www.freebmd.org.uk/">
+                  <td><a href="https://www.freebmd.org.uk/">Free UK BMD Register</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>freebmd.org.uk</code></td>
+                </tr>
+                <tr class="osint-row" data-search="freedar  radar.freedar.uk https://radar.freedar.uk/virtualradar/desktop.html">
+                  <td><a href="https://radar.freedar.uk/VirtualRadar/desktop.html">Freedar</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>radar.freedar.uk</code></td>
+                </tr>
+                <tr class="osint-row" data-search="fspy - still image camera matching  fspy.io https://fspy.io/">
+                  <td><a href="https://fspy.io/">fSpy - still image camera matching</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>fspy.io</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+        <details class="alpha-group" data-group="G">
+          <summary><span>G</span><span class="group-count">28 links</span></summary>
+          <div class="table-wrap library-table-wrap">
+            <table class="osint-table">
+              <thead><tr><th scope="col">Resource</th><th scope="col">Description</th><th scope="col">Domain</th></tr></thead>
+              <tbody>
+                <tr class="osint-row" data-search="gelbe seiten - german phone book  gelbeseiten.de https://www.gelbeseiten.de/">
+                  <td><a href="https://www.gelbeseiten.de/">Gelbe Seiten - German Phone Book</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>gelbeseiten.de</code></td>
+                </tr>
+                <tr class="osint-row" data-search="geo ip tool  geoiptool.com https://geoiptool.com/">
+                  <td><a href="https://geoiptool.com/">Geo IP Tool</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>geoiptool.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="geonames  geonames.org https://www.geonames.org/">
+                  <td><a href="https://www.geonames.org/">GeoNames</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>geonames.org</code></td>
+                </tr>
+                <tr class="osint-row" data-search="geoportal  geoportail.lu https://www.geoportail.lu/en/">
+                  <td><a href="https://www.geoportail.lu/en/">Geoportal</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>geoportail.lu</code></td>
+                </tr>
+                <tr class="osint-row" data-search="geospy.ai geospy.ai geospy.ai https://geospy.ai/">
+                  <td><a href="https://geospy.ai/">Geospy.ai</a></td>
+                  <td><p class="resource-description">GeoSpy.AI</p></td>
+                  <td><code>geospy.ai</code></td>
+                </tr>
+                <tr class="osint-row" data-search="gephi  gephi.org https://gephi.org/">
+                  <td><a href="https://gephi.org/">Gephi</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>gephi.org</code></td>
+                </tr>
+                <tr class="osint-row" data-search="get the data - uk open data portal  getthedata.com https://www.getthedata.com/">
+                  <td><a href="https://www.getthedata.com/">Get The Data - UK Open Data Portal</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>getthedata.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="ghostproject.fr  ghostproject.fr https://ghostproject.fr/">
+                  <td><a href="https://ghostproject.fr/">ghostproject.fr</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>ghostproject.fr</code></td>
+                </tr>
+                <tr class="osint-row" data-search="global business registry resources  en.baumgartner-research.com https://en.baumgartner-research.com/unternehmensregister">
+                  <td><a href="https://en.baumgartner-research.com/unternehmensregister">Global Business Registry Resources</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>en.baumgartner-research.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="global fishing watch shared workspace the global fishing watch map is the first open-access platform for visualization and analysis of marine traffic and vessel-based human activity at sea. globalfishingwatch.org https://globalfishingwatch.org/map">
+                  <td><a href="https://globalfishingwatch.org/map">Global Fishing Watch shared workspace</a></td>
+                  <td><p class="resource-description">The Global Fishing Watch map is the first open-access platform for visualization and analysis of marine traffic and vessel-based human activity at sea.</p></td>
+                  <td><code>globalfishingwatch.org</code></td>
+                </tr>
+                <tr class="osint-row" data-search="global incident map  globalincidentmap.com http://www.globalincidentmap.com/threatmatrix.php">
+                  <td><a href="http://www.globalincidentmap.com/threatmatrix.php">Global Incident Map</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>globalincidentmap.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="google - search operator for all file types  google.com https://www.google.com/search?q=book%20-inurl%3a(jsp%7cpl%7cphp%7chtml%7caspx%7chtm%7ccf%7cshtml)%20intitle%3aindex.of%20-inurl%3a(listen77%7cmp3raid%7cmp3toss%7cmp3drug%7cindex_of%7cwallywashis)">
+                  <td><a href="https://www.google.com/search?q=book%20-inurl%3A(jsp%7Cpl%7Cphp%7Chtml%7Caspx%7Chtm%7Ccf%7Cshtml)%20intitle%3Aindex.of%20-inurl%3A(listen77%7Cmp3raid%7Cmp3toss%7Cmp3drug%7Cindex_of%7Cwallywashis)">Google - search operator for all file types</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>google.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="google cid converter this tool convert google cid between decimal and hexadecimal and generate links to google maps, mapmaker, knowledge graph in google search. pleper.com https://pleper.com/index.php?do=tools&amp;sdo=cid_converter">
+                  <td><a href="https://pleper.com/index.php?do=tools&amp;sdo=cid_converter">Google CID Converter</a></td>
+                  <td><p class="resource-description">This tool convert Google CID between decimal and Hexadecimal and generate links to Google Maps, Mapmaker, Knowledge graph in google search.</p></td>
+                  <td><code>pleper.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="google domain enquiries  cse.google.com https://cse.google.com/cse?cx=005797772976587943970:ca2hiy6hmri">
+                  <td><a href="https://cse.google.com/cse?cx=005797772976587943970:ca2hiy6hmri">Google Domain Enquiries</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>cse.google.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="google dorks  exploit-db.com https://www.exploit-db.com/google-hacking-database">
+                  <td><a href="https://www.exploit-db.com/google-hacking-database">Google Dorks</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>exploit-db.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="google fact check tools  toolbox.google.com https://toolbox.google.com/factcheck/explorer/search/list:recent;hl=en">
+                  <td><a href="https://toolbox.google.com/factcheck/explorer/search/list:recent;hl=en">Google Fact Check Tools</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>toolbox.google.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="google images  google.com https://www.google.com/imghp">
+                  <td><a href="https://www.google.com/imghp">Google Images</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>google.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="google maps  google.com https://www.google.com/maps">
+                  <td><a href="https://www.google.com/maps">Google Maps</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>google.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="google search operators  googleguide.com http://www.googleguide.com/advanced_operators_reference.html">
+                  <td><a href="http://www.googleguide.com/advanced_operators_reference.html">Google Search Operators</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>googleguide.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="google search operators official docs  support.google.com https://support.google.com/websearch/answer/2466433?hl=en&amp;visit_id=636732409706019769-1521966479&amp;rd=1">
+                  <td><a href="https://support.google.com/websearch/answer/2466433?hl=en&amp;visit_id=636732409706019769-1521966479&amp;rd=1">Google Search Operators Official Docs</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>support.google.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="google tags documentation  developers.google.com https://developers.google.com/tag-platform/devguides/existing">
+                  <td><a href="https://developers.google.com/tag-platform/devguides/existing">Google Tags Documentation</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>developers.google.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="google translate  translate.google.com https://translate.google.com/">
+                  <td><a href="https://translate.google.com/">Google Translate</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>translate.google.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="gpt zero covered by &gt;100 media outlets, gptzero is the most advanced ai detector for chatgpt, gpt-4, bard. check up to 50000 characters for ai plagiarism in seconds. gptzero.me https://gptzero.me/">
+                  <td><a href="https://gptzero.me/">GPT Zero</a></td>
+                  <td><p class="resource-description">Covered by &gt;100 media outlets, GPTZero is the most advanced AI detector for ChatGPT, GPT-4, Bard. Check up to 50000 characters for AI plagiarism in seconds.</p></td>
+                  <td><code>gptzero.me</code></td>
+                </tr>
+                <tr class="osint-row" data-search="grayhat warfare  buckets.grayhatwarfare.com https://buckets.grayhatwarfare.com/">
+                  <td><a href="https://buckets.grayhatwarfare.com/">Grayhat Warfare</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>buckets.grayhatwarfare.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="greynoise intelligence  greynoise.io http://greynoise.io/">
+                  <td><a href="http://greynoise.io/">GreyNoise Intelligence</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>greynoise.io</code></td>
+                </tr>
+                <tr class="osint-row" data-search="grid reference finder  gridreferencefinder.com https://gridreferencefinder.com/">
+                  <td><a href="https://gridreferencefinder.com/">Grid Reference Finder</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>gridreferencefinder.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="gsmarena.com  gsmarena.com https://www.gsmarena.com/">
+                  <td><a href="https://www.gsmarena.com/">GSMArena.com</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>gsmarena.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="gulesider - people, phone and businesses (no)  gulesider.no https://www.gulesider.no/">
+                  <td><a href="https://www.gulesider.no/">Gulesider - People, Phone and Businesses (NO)</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>gulesider.no</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+        <details class="alpha-group" data-group="H">
+          <summary><span>H</span><span class="group-count">9 links</span></summary>
+          <div class="table-wrap library-table-wrap">
+            <table class="osint-table">
+              <thead><tr><th scope="col">Resource</th><th scope="col">Description</th><th scope="col">Domain</th></tr></thead>
+              <tbody>
+                <tr class="osint-row" data-search="have i been pwned: check if your email has been compromised in a data breach  haveibeenpwned.com https://haveibeenpwned.com/">
+                  <td><a href="https://haveibeenpwned.com/">Have I Been Pwned: Check if your email has been compromised in a data breach</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>haveibeenpwned.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="hitta (swe)  hitta.se https://www.hitta.se/">
+                  <td><a href="https://www.hitta.se/">Hitta (SWE)</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>hitta.se</code></td>
+                </tr>
+                <tr class="osint-row" data-search="hlr lookup  free-hlr.com https://www.free-hlr.com/">
+                  <td><a href="https://www.free-hlr.com/">HLR Lookup</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>free-hlr.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="hoaxy: how claims spread online visualize the spread of information on twitter. hoaxy.osome.iu.edu https://hoaxy.osome.iu.edu/">
+                  <td><a href="https://hoaxy.osome.iu.edu/">Hoaxy: How claims spread online</a></td>
+                  <td><p class="resource-description">Visualize the spread of information on Twitter.</p></td>
+                  <td><code>hoaxy.osome.iu.edu</code></td>
+                </tr>
+                <tr class="osint-row" data-search="https://generated.photos/  generated.photos https://generated.photos/">
+                  <td><a href="https://generated.photos/">https://generated.photos/</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>generated.photos</code></td>
+                </tr>
+                <tr class="osint-row" data-search="https://www.faceplusplus.com/face-merging/  faceplusplus.com https://www.faceplusplus.com/face-merging/">
+                  <td><a href="https://www.faceplusplus.com/face-merging/">https://www.faceplusplus.com/face-merging/</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>faceplusplus.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="https://www.thispersondoesnotexist.com/  thispersondoesnotexist.com https://www.thispersondoesnotexist.com/">
+                  <td><a href="https://www.thispersondoesnotexist.com/">https://www.thispersondoesnotexist.com/</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>thispersondoesnotexist.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="hunchly  hunch.ly https://hunch.ly/">
+                  <td><a href="https://hunch.ly/">Hunchly</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>hunch.ly</code></td>
+                </tr>
+                <tr class="osint-row" data-search="hunter.io  hunter.io https://hunter.io/search">
+                  <td><a href="https://hunter.io/search">Hunter.io</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>hunter.io</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+        <details class="alpha-group" data-group="I">
+          <summary><span>I</span><span class="group-count">24 links</span></summary>
+          <div class="table-wrap library-table-wrap">
+            <table class="osint-table">
+              <thead><tr><th scope="col">Resource</th><th scope="col">Description</th><th scope="col">Domain</th></tr></thead>
+              <tbody>
+                <tr class="osint-row" data-search="iaca dark web investigation support – provided by i.a.c.a.  iaca-darkweb-tools.com https://iaca-darkweb-tools.com/">
+                  <td><a href="https://iaca-darkweb-tools.com/">IACA Dark Web Investigation Support – Provided by I.A.C.A.</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>iaca-darkweb-tools.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="iana — whois service  iana.org https://www.iana.org/whois">
+                  <td><a href="https://www.iana.org/whois">IANA — WHOIS Service</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>iana.org</code></td>
+                </tr>
+                <tr class="osint-row" data-search="icann rdrs  icann.org https://www.icann.org/rdrs-en">
+                  <td><a href="https://www.icann.org/rdrs-en">ICANN RDRS</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>icann.org</code></td>
+                </tr>
+                <tr class="osint-row" data-search="icc live piracy map  icc-ccs.org https://www.icc-ccs.org/piracy-reporting-centre/live-piracy-map">
+                  <td><a href="https://www.icc-ccs.org/piracy-reporting-centre/live-piracy-map">ICC Live Piracy Map</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>icc-ccs.org</code></td>
+                </tr>
+                <tr class="osint-row" data-search="icij offshore leaks database find out who’s behind more than 800,000 offshore companies, foundations and trusts from icij’s investigations. offshoreleaks.icij.org https://offshoreleaks.icij.org/">
+                  <td><a href="https://offshoreleaks.icij.org/">ICIJ Offshore Leaks Database</a></td>
+                  <td><p class="resource-description">Find out who’s behind more than 800,000 offshore companies, foundations and trusts from ICIJ’s investigations.</p></td>
+                  <td><code>offshoreleaks.icij.org</code></td>
+                </tr>
+                <tr class="osint-row" data-search="icp credit reports  icpcredit.com https://www.icpcredit.com/">
+                  <td><a href="https://www.icpcredit.com/">ICP Credit reports</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>icpcredit.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="ifixit  ifixit.com https://www.ifixit.com/">
+                  <td><a href="https://www.ifixit.com/">iFixit</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>ifixit.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="iknowwhatyoudownload.com  iknowwhatyoudownload.com https://iknowwhatyoudownload.com/en/peer/">
+                  <td><a href="https://iknowwhatyoudownload.com/en/peer/">Iknowwhatyoudownload.com</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>iknowwhatyoudownload.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="illuminarty  app.illuminarty.ai https://app.illuminarty.ai/">
+                  <td><a href="https://app.illuminarty.ai/">Illuminarty</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>app.illuminarty.ai</code></td>
+                </tr>
+                <tr class="osint-row" data-search="imei24  imei24.com https://imei24.com/">
+                  <td><a href="https://imei24.com/">IMEI24</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>imei24.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="importyeti importyeti finds suppliers &amp;amp; manufacturers based on actionable data importyeti.com https://www.importyeti.com/">
+                  <td><a href="https://www.importyeti.com/">ImportYeti</a></td>
+                  <td><p class="resource-description">ImportYeti finds suppliers &amp;amp; manufacturers based on actionable data</p></td>
+                  <td><code>importyeti.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="info ops archive information operations archive io-archive.org https://www.io-archive.org/#/">
+                  <td><a href="https://www.io-archive.org/#/">Info Ops Archive</a></td>
+                  <td><p class="resource-description">Information Operations Archive</p></td>
+                  <td><code>io-archive.org</code></td>
+                </tr>
+                <tr class="osint-row" data-search="infobel  infobel.com https://www.infobel.com/">
+                  <td><a href="https://www.infobel.com/">Infobel</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>infobel.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="información gratis de empresas españolas (sp)  infocif.economia3.com https://infocif.economia3.com/">
+                  <td><a href="https://infocif.economia3.com/">Información GRATIS de Empresas Españolas (SP)</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>infocif.economia3.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="insfo - chrome extension  chrome.google.com https://chrome.google.com/webstore/detail/insfo-all-in-one-ig-expor/bckleejkdhlponanidmjfjdigpahlado/related">
+                  <td><a href="https://chrome.google.com/webstore/detail/insfo-all-in-one-ig-expor/bckleejkdhlponanidmjfjdigpahlado/related">InsFo - Chrome Extension</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>chrome.google.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="instagram  instagram.com https://instagram.com/">
+                  <td><a href="https://instagram.com/">Instagram</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>instagram.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="instahunt instahunt is a free osint tool to find instagram places and posts based on a location. instahunt uses instagram places and posts to search and find instagram posts based on their location. instahunt is simple to use and designed for osint researchers and journalists. instahunt.co https://instahunt.co/">
+                  <td><a href="https://instahunt.co/">InstaHunt</a></td>
+                  <td><p class="resource-description">InstaHunt is a Free OSINT tool to find Instagram Places and Posts based on a location. InstaHunt uses Instagram Places and Posts to search and find Instagram posts based on their location. InstaHunt is simple to use and designed for OSINT Researchers and Journalists.</p></td>
+                  <td><code>instahunt.co</code></td>
+                </tr>
+                <tr class="osint-row" data-search="instant data scraper instant data scraper extracts data from web pages and exports it as excel or csv files chromewebstore.google.com https://chromewebstore.google.com/detail/instant-data-scraper/ofaokhiedipichpaobibbnahnkdoiiah?pli=1">
+                  <td><a href="https://chromewebstore.google.com/detail/instant-data-scraper/ofaokhiedipichpaobibbnahnkdoiiah?pli=1">Instant Data Scraper</a></td>
+                  <td><p class="resource-description">Instant Data Scraper extracts data from web pages and exports it as Excel or CSV files</p></td>
+                  <td><code>chromewebstore.google.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="instant google street view  instantstreetview.com https://www.instantstreetview.com/">
+                  <td><a href="https://www.instantstreetview.com/">Instant Google Street View</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>instantstreetview.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="intelligence x intelligence x is a search engine and data archive. search tor, i2p, data leaks and the public web by email, domain, ip, cidr, bitcoin address and more. intelx.io https://intelx.io/">
+                  <td><a href="https://intelx.io/">Intelligence X</a></td>
+                  <td><p class="resource-description">Intelligence X is a search engine and data archive. Search Tor, I2P, data leaks and the public web by email, domain, IP, CIDR, Bitcoin address and more.</p></td>
+                  <td><code>intelx.io</code></td>
+                </tr>
+                <tr class="osint-row" data-search="intelligence x - facebook  intelx.io https://intelx.io/tools?tab=facebook">
+                  <td><a href="https://intelx.io/tools?tab=facebook">Intelligence X - Facebook</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>intelx.io</code></td>
+                </tr>
+                <tr class="osint-row" data-search="internet archive: digital library of free &amp; borrowable books, movies, music &amp; wayback machine  archive.org https://archive.org/">
+                  <td><a href="https://archive.org/">Internet Archive: Digital Library of Free &amp; Borrowable Books, Movies, Music &amp; Wayback Machine</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>archive.org</code></td>
+                </tr>
+                <tr class="osint-row" data-search="invid verification plugin a verification “swiss army knife” helping journalists to save time and be more efficient in their fact-checking and debunking tasks on social networks. invid-project.eu https://www.invid-project.eu/tools-and-services/invid-verification-plugin/">
+                  <td><a href="https://www.invid-project.eu/tools-and-services/invid-verification-plugin/">InVID Verification Plugin</a></td>
+                  <td><p class="resource-description">A verification “Swiss army knife” helping journalists to save time and be more efficient in their fact-checking and debunking tasks on social networks.</p></td>
+                  <td><code>invid-project.eu</code></td>
+                </tr>
+                <tr class="osint-row" data-search="ipvm designer / calculator using google maps, layout and design cameras, choosing from 10,000+ models, delivering fov and image quality previews plus export to pdf, powerpoint and more calculator.ipvm.com https://calculator.ipvm.com/">
+                  <td><a href="https://calculator.ipvm.com/">IPVM Designer / Calculator</a></td>
+                  <td><p class="resource-description">Using Google Maps, layout and design cameras, choosing from 10,000+ models, delivering FoV and image quality previews plus export to PDF, Powerpoint and more</p></td>
+                  <td><code>calculator.ipvm.com</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+        <details class="alpha-group" data-group="J">
+          <summary><span>J</span><span class="group-count">1 links</span></summary>
+          <div class="table-wrap library-table-wrap">
+            <table class="osint-table">
+              <thead><tr><th scope="col">Resource</th><th scope="col">Description</th><th scope="col">Domain</th></tr></thead>
+              <tbody>
+                <tr class="osint-row" data-search="judy records  judyrecords.com https://www.judyrecords.com/">
+                  <td><a href="https://www.judyrecords.com/">Judy Records</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>judyrecords.com</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+        <details class="alpha-group" data-group="K">
+          <summary><span>K</span><span class="group-count">3 links</span></summary>
+          <div class="table-wrap library-table-wrap">
+            <table class="osint-table">
+              <thead><tr><th scope="col">Resource</th><th scope="col">Description</th><th scope="col">Domain</th></tr></thead>
+              <tbody>
+                <tr class="osint-row" data-search="kartaview  kartaview.org https://kartaview.org/">
+                  <td><a href="https://kartaview.org/">KartaView</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>kartaview.org</code></td>
+                </tr>
+                <tr class="osint-row" data-search="kbo public search (be)  kbopub.economie.fgov.be https://kbopub.economie.fgov.be/kbopub/zoeknummerform.html">
+                  <td><a href="https://kbopub.economie.fgov.be/kbopub/zoeknummerform.html">KBO Public Search (BE)</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>kbopub.economie.fgov.be</code></td>
+                </tr>
+                <tr class="osint-row" data-search="kvk (netherlands)  kvk.nl http://www.kvk.nl/">
+                  <td><a href="http://www.kvk.nl/">KVK (Netherlands)</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>kvk.nl</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+        <details class="alpha-group" data-group="L">
+          <summary><span>L</span><span class="group-count">10 links</span></summary>
+          <div class="table-wrap library-table-wrap">
+            <table class="osint-table">
+              <thead><tr><th scope="col">Resource</th><th scope="col">Description</th><th scope="col">Domain</th></tr></thead>
+              <tbody>
+                <tr class="osint-row" data-search="leakcheck data breach search engine, low price starting from $2.99/day, one free email address, unlimited api, 7b+ records leakcheck.io https://leakcheck.io/">
+                  <td><a href="https://leakcheck.io/">LeakCheck</a></td>
+                  <td><p class="resource-description">Data breach search engine, low price starting from $2.99/day, one free email address, unlimited API, 7B+ records</p></td>
+                  <td><code>leakcheck.io</code></td>
+                </tr>
+                <tr class="osint-row" data-search="leakix  leakix.net https://leakix.net/">
+                  <td><a href="https://leakix.net/">LeakIX</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>leakix.net</code></td>
+                </tr>
+                <tr class="osint-row" data-search="librebor - spanish company data  librebor.me https://librebor.me/">
+                  <td><a href="https://librebor.me/">LibreBor - Spanish company data</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>librebor.me</code></td>
+                </tr>
+                <tr class="osint-row" data-search="libretranslate free and open source machine translation api. self-hosted, offline capable and easy to setup. run your own api server in just a few minutes. libretranslate.com https://libretranslate.com/">
+                  <td><a href="https://libretranslate.com/">LibreTranslate</a></td>
+                  <td><p class="resource-description">Free and Open Source Machine Translation API. Self-hosted, offline capable and easy to setup. Run your own API server in just a few minutes.</p></td>
+                  <td><code>libretranslate.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="license plates - countries a - b - licenseplates.tv  licenseplates.tv https://www.licenseplates.tv/internationa-license-plates.html">
+                  <td><a href="https://www.licenseplates.tv/internationa-license-plates.html">License Plates - Countries A - B - LICENSEPLATES.TV</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>licenseplates.tv</code></td>
+                </tr>
+                <tr class="osint-row" data-search="list of tor onion services - wikiwand  wikiwand.com https://www.wikiwand.com/en/list_of_tor_onion_services">
+                  <td><a href="https://www.wikiwand.com/en/List_of_Tor_onion_services">List of Tor onion services - Wikiwand</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>wikiwand.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="littlesis - government &amp; business networking  littlesis.org http://littlesis.org/">
+                  <td><a href="http://littlesis.org/">LittleSis - Government &amp; Business Networking</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>littlesis.org</code></td>
+                </tr>
+                <tr class="osint-row" data-search="live ua map (usa and others)  usa.liveuamap.com https://usa.liveuamap.com/">
+                  <td><a href="https://usa.liveuamap.com/">Live UA Map (USA and others)</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>usa.liveuamap.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="localcoinswap buy btc, eth, usdc, usdt, dai and more cryptos worldwide using 300+ payment methods. localcoinswap is fast, easy, and private. get your free wallet &amp;amp; account today! localcoinswap.com https://localcoinswap.com/">
+                  <td><a href="https://localcoinswap.com/">LocalCoinSwap</a></td>
+                  <td><p class="resource-description">Buy BTC, ETH, USDC, USDT, DAI and more cryptos worldwide using 300+ payment methods. LocalCoinSwap is fast, easy, and private. Get your free wallet &amp;amp; account today!</p></td>
+                  <td><code>localcoinswap.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="luxembourg business registers  lbr.lu https://www.lbr.lu/mjrcs-lbr/jsp/indexactionnotsecured.action?time=1661600978876&amp;loop=3">
+                  <td><a href="https://www.lbr.lu/mjrcs-lbr/jsp/IndexActionNotSecured.action?time=1661600978876&amp;loop=3">Luxembourg Business Registers</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>lbr.lu</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+        <details class="alpha-group" data-group="M">
+          <summary><span>M</span><span class="group-count">14 links</span></summary>
+          <div class="table-wrap library-table-wrap">
+            <table class="osint-table">
+              <thead><tr><th scope="col">Resource</th><th scope="col">Description</th><th scope="col">Domain</th></tr></thead>
+              <tbody>
+                <tr class="osint-row" data-search="maltiverse  maltiverse.com https://www.maltiverse.com/">
+                  <td><a href="https://www.maltiverse.com/">Maltiverse</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>maltiverse.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="mamont&#x27;s open ftp search  mmnt.net https://www.mmnt.net/">
+                  <td><a href="https://www.mmnt.net/">Mamont&#x27;s Open FTP Search</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>mmnt.net</code></td>
+                </tr>
+                <tr class="osint-row" data-search="mapchecking  mapchecking.com http://mapchecking.com/">
+                  <td><a href="http://mapchecking.com/">MapChecking</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>mapchecking.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="mapillary  mapillary.com https://www.mapillary.com/">
+                  <td><a href="https://www.mapillary.com/">Mapillary</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>mapillary.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="marine traffic  marinetraffic.com https://www.marinetraffic.com/">
+                  <td><a href="https://www.marinetraffic.com/">Marine Traffic</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>marinetraffic.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="maritime database  maritime-database.com https://www.maritime-database.com/">
+                  <td><a href="https://www.maritime-database.com/">Maritime Database</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>maritime-database.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="martenson/disposable-email-domains  github.com https://github.com/martenson/disposable-email-domains">
+                  <td><a href="https://github.com/martenson/disposable-email-domains">martenson/disposable-email-domains</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>github.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="mastdata (uk)  mastdata.com https://www.mastdata.com/">
+                  <td><a href="https://www.mastdata.com/">Mastdata (UK)</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>mastdata.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="motorway signs database  brombeer.net http://www.brombeer.net/signs/">
+                  <td><a href="http://www.brombeer.net/signs/">Motorway Signs Database</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>brombeer.net</code></td>
+                </tr>
+                <tr class="osint-row" data-search="ms face recognition  learn.microsoft.com https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/concept-face-recognition">
+                  <td><a href="https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/concept-face-recognition">MS Face recognition</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>learn.microsoft.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="mxtoolbox  mxtoolbox.com https://mxtoolbox.com/">
+                  <td><a href="https://mxtoolbox.com/">MxToolbox</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>mxtoolbox.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="my blog: www.nixintel.info  nixintel.info https://nixintel.info/">
+                  <td><a href="https://nixintel.info/">My blog: www.nixintel.info</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>nixintel.info</code></td>
+                </tr>
+                <tr class="osint-row" data-search="my linkedin  linkedin.com https://www.linkedin.com/in/steven-harris-71093a159">
+                  <td><a href="https://www.linkedin.com/in/steven-harris-71093a159">My LinkedIn</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>linkedin.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="my x account (@nixintel)  twitter.com https://twitter.com/nixintel">
+                  <td><a href="https://twitter.com/nixintel">My X account (@nixintel)</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>twitter.com</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+        <details class="alpha-group" data-group="N">
+          <summary><span>N</span><span class="group-count">14 links</span></summary>
+          <div class="table-wrap library-table-wrap">
+            <table class="osint-table">
+              <thead><tr><th scope="col">Resource</th><th scope="col">Description</th><th scope="col">Domain</th></tr></thead>
+              <tbody>
+                <tr class="osint-row" data-search="namecheckr.com  namecheckr.com https://www.namecheckr.com/">
+                  <td><a href="https://www.namecheckr.com/">namecheckr.com</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>namecheckr.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="namechk  namechk.com https://namechk.com/">
+                  <td><a href="https://namechk.com/">Namechk</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>namechk.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="national library of norway  nb.no https://www.nb.no/">
+                  <td><a href="https://www.nb.no/">National Library of Norway</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>nb.no</code></td>
+                </tr>
+                <tr class="osint-row" data-search="national numbering plans  itu.int https://www.itu.int/oth/t0202.aspx?parent=t0202">
+                  <td><a href="https://www.itu.int/oth/T0202.aspx?parent=T0202">National Numbering Plans</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>itu.int</code></td>
+                </tr>
+                <tr class="osint-row" data-search="national rail enquiries  nationalrail.co.uk http://www.nationalrail.co.uk/times_fares/ldb.aspx">
+                  <td><a href="http://www.nationalrail.co.uk/times_fares/ldb.aspx">National Rail Enquiries</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>nationalrail.co.uk</code></td>
+                </tr>
+                <tr class="osint-row" data-search="nerd  nerd.cesnet.cz https://nerd.cesnet.cz/nerd/ips/">
+                  <td><a href="https://nerd.cesnet.cz/nerd/ips/">NERD</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>nerd.cesnet.cz</code></td>
+                </tr>
+                <tr class="osint-row" data-search="nerdydata.com  nerdydata.com https://nerdydata.com/">
+                  <td><a href="https://nerdydata.com/">NerdyData.com</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>nerdydata.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="netblocks  netblocks.org https://netblocks.org/">
+                  <td><a href="https://netblocks.org/">Netblocks</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>netblocks.org</code></td>
+                </tr>
+                <tr class="osint-row" data-search="nextcloud face recognition  apps.nextcloud.com https://apps.nextcloud.com/apps/facerecognition">
+                  <td><a href="https://apps.nextcloud.com/apps/facerecognition">Nextcloud Face Recognition</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>apps.nextcloud.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="ninoseki/mihari  github.com https://github.com/ninoseki/mihari">
+                  <td><a href="https://github.com/ninoseki/mihari">ninoseki/mihari</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>github.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="nmpr  thenmpr.com https://thenmpr.com/home">
+                  <td><a href="https://thenmpr.com/home">NMPR</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>thenmpr.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="northdata.com - eu company search engine  northdata.com https://www.northdata.com/">
+                  <td><a href="https://www.northdata.com/">Northdata.com - EU Company Search Engine</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>northdata.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="nperf - uk coverage checker  nperf.com https://www.nperf.com/en/map/gb/">
+                  <td><a href="https://www.nperf.com/en/map/GB/">NPerf - UK Coverage checker</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>nperf.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="numberway global phone books  numberway.com https://www.numberway.com/">
+                  <td><a href="https://www.numberway.com/">Numberway Global Phone Books</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>numberway.com</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+        <details class="alpha-group" data-group="O">
+          <summary><span>O</span><span class="group-count">16 links</span></summary>
+          <div class="table-wrap library-table-wrap">
+            <table class="osint-table">
+              <thead><tr><th scope="col">Resource</th><th scope="col">Description</th><th scope="col">Domain</th></tr></thead>
+              <tbody>
+                <tr class="osint-row" data-search="occrp dashboard  data.occrp.org https://data.occrp.org/">
+                  <td><a href="https://data.occrp.org/">OCCRP Dashboard</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>data.occrp.org</code></td>
+                </tr>
+                <tr class="osint-row" data-search="onionlink  onion.link https://onion.link/">
+                  <td><a href="https://onion.link/">OnionLink</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>onion.link</code></td>
+                </tr>
+                <tr class="osint-row" data-search="online image enlarger  imageenlarger.com https://www.imageenlarger.com/">
+                  <td><a href="https://www.imageenlarger.com/">Online Image Enlarger</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>imageenlarger.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="open street map  openstreetmap.org https://www.openstreetmap.org/">
+                  <td><a href="https://www.openstreetmap.org/">Open Street Map</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>openstreetmap.org</code></td>
+                </tr>
+                <tr class="osint-row" data-search="openaerialmap  openaerialmap.org https://openaerialmap.org/">
+                  <td><a href="https://openaerialmap.org/">OpenAerialMap</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>openaerialmap.org</code></td>
+                </tr>
+                <tr class="osint-row" data-search="opencellid - largest open database of cell towers &amp; geolocation - by unwired labs  opencellid.org https://opencellid.org/#zoom=16&amp;lat=37.77889&amp;lon=-122.41942">
+                  <td><a href="https://opencellid.org/#zoom=16&amp;lat=37.77889&amp;lon=-122.41942">OpenCelliD - Largest Open Database of Cell Towers &amp; Geolocation - by Unwired Labs</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>opencellid.org</code></td>
+                </tr>
+                <tr class="osint-row" data-search="opencorporates :: the open database of the corporate world  opencorporates.com https://opencorporates.com/">
+                  <td><a href="https://opencorporates.com/">OpenCorporates :: The Open Database Of The Corporate World</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>opencorporates.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="opengovuk: open government data in united kingdom  opengovuk.com https://opengovuk.com/">
+                  <td><a href="https://opengovuk.com/">OpenGovUK: Open Government Data in United Kingdom</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>opengovuk.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="opensanctions.org opensanctions helps investigators find leads, allows companies to manage risk and enables technologists to build data-driven products. opensanctions.org https://www.opensanctions.org/">
+                  <td><a href="https://www.opensanctions.org/">OpenSanctions.org</a></td>
+                  <td><p class="resource-description">OpenSanctions helps investigators find leads, allows companies to manage risk and enables technologists to build data-driven products.</p></td>
+                  <td><code>opensanctions.org</code></td>
+                </tr>
+                <tr class="osint-row" data-search="orbis directory  orbisdirectory.bvdinfo.com https://orbisdirectory.bvdinfo.com/version-20181213/orbisdirectory/1/companies">
+                  <td><a href="https://orbisdirectory.bvdinfo.com/version-20181213/OrbisDirectory/1/Companies">Orbis directory</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>orbisdirectory.bvdinfo.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="originality.ai - a plagiarism checker and ai detector built for content publishers at originality.ai we provide a complete toolset (ai checker, plagiarism checker, fact checker and readability checker) that helps website owners, content marketers, writers, publishers and any copy editor hit publish with integrity. originality.ai https://originality.ai/">
+                  <td><a href="https://originality.ai/">Originality.AI - A Plagiarism Checker and AI Detector Built for Content Publishers</a></td>
+                  <td><p class="resource-description">At Originality.ai we provide a complete toolset (AI checker, Plagiarism Checker, Fact Checker and Readability Checker) that helps Website Owners, Content Marketers, Writers, Publishers and any Copy Editor hit Publish with Integrity.</p></td>
+                  <td><code>originality.ai</code></td>
+                </tr>
+                <tr class="osint-row" data-search="osint combine osint combine is the developer of the leading osint tool nexusxplore and acclaimed osint training. trusted globally by defense, national security, law enforcement &amp; fortune 500s. open-source intelligence training &amp; tools by analysts for analysts. osintcombine.com https://osintcombine.com/">
+                  <td><a href="https://osintcombine.com/">OSINT Combine</a></td>
+                  <td><p class="resource-description">OSINT Combine is the developer of the leading OSINT tool NexusXplore and acclaimed OSINT training. Trusted globally by Defense, National Security, Law Enforcement &amp; Fortune 500s. Open-source intelligence training &amp; tools by analysts for analysts.</p></td>
+                  <td><code>osintcombine.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="osint.industries discover how osint industries specializes in leveraging osint to investigate emails and phone numbers. unlock valuable insights and conduct comprehensive investigations using our advanced tools and resources. osint.industries https://osint.industries/">
+                  <td><a href="https://osint.industries/">Osint.industries</a></td>
+                  <td><p class="resource-description">Discover how OSINT Industries specializes in leveraging OSINT to investigate emails and phone numbers. Unlock valuable insights and conduct comprehensive investigations using our advanced tools and resources.</p></td>
+                  <td><code>osint.industries</code></td>
+                </tr>
+                <tr class="osint-row" data-search="osirt browser osirt iii - professional and simplified online investigations. discover the features and benefits of our digital casebook tool. osirtbrowser.com https://osirtbrowser.com/">
+                  <td><a href="https://osirtbrowser.com/">OSIRT Browser</a></td>
+                  <td><p class="resource-description">OSIRT iii - Professional and simplified online investigations. Discover the features and benefits of our digital casebook tool.</p></td>
+                  <td><code>osirtbrowser.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="overpass turbo  overpass-turbo.eu https://overpass-turbo.eu/">
+                  <td><a href="https://overpass-turbo.eu/">Overpass Turbo</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>overpass-turbo.eu</code></td>
+                </tr>
+                <tr class="osint-row" data-search="oxt  oxt.me https://oxt.me/">
+                  <td><a href="https://oxt.me/">OXT</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>oxt.me</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+        <details class="alpha-group" data-group="P">
+          <summary><span>P</span><span class="group-count">21 links</span></summary>
+          <div class="table-wrap library-table-wrap">
+            <table class="osint-table">
+              <thead><tr><th scope="col">Resource</th><th scope="col">Description</th><th scope="col">Domain</th></tr></thead>
+              <tbody>
+                <tr class="osint-row" data-search="pappers - french company lookup  pappers.fr https://www.pappers.fr/">
+                  <td><a href="https://www.pappers.fr/">Pappers - French Company Lookup</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>pappers.fr</code></td>
+                </tr>
+                <tr class="osint-row" data-search="pastebin  pastebin.com https://pastebin.com/">
+                  <td><a href="https://pastebin.com/">Pastebin</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>pastebin.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="pastebin dump collection  psbdmp.ws https://psbdmp.ws/">
+                  <td><a href="https://psbdmp.ws/">Pastebin dump collection</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>psbdmp.ws</code></td>
+                </tr>
+                <tr class="osint-row" data-search="pdf search engine - pdf,doc,ppt,ebook search engine  findpdfdoc.com http://findpdfdoc.com/">
+                  <td><a href="http://findpdfdoc.com/">PDF SEARCH ENGINE - PDF,DOC,PPT,Ebook search ENGINE</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>findpdfdoc.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="peakfinder  peakfinder.org https://www.peakfinder.org/">
+                  <td><a href="https://www.peakfinder.org/">Peakfinder</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>peakfinder.org</code></td>
+                </tr>
+                <tr class="osint-row" data-search="peepmail  samy.pl http://samy.pl/peepmail/">
+                  <td><a href="http://samy.pl/peepmail/">Peepmail</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>samy.pl</code></td>
+                </tr>
+                <tr class="osint-row" data-search="perma.cc broken links are everywhere. perma helps authors and journals create permanent links for citations in their published work. perma.cc https://perma.cc/">
+                  <td><a href="https://perma.cc/">Perma.cc</a></td>
+                  <td><p class="resource-description">Broken links are everywhere. Perma helps authors and journals create permanent links for citations in their published work.</p></td>
+                  <td><code>perma.cc</code></td>
+                </tr>
+                <tr class="osint-row" data-search="person &amp; vehicle lookup (swe)  mrkoll.se https://mrkoll.se/">
+                  <td><a href="https://mrkoll.se/">Person &amp; Vehicle Lookup (SWE)</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>mrkoll.se</code></td>
+                </tr>
+                <tr class="osint-row" data-search="phantombuster  phantombuster.com https://phantombuster.com/phantombuster">
+                  <td><a href="https://phantombuster.com/phantombuster">Phantombuster</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>phantombuster.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="phishstats  phishstats.info https://phishstats.info/">
+                  <td><a href="https://phishstats.info/">PhishStats</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>phishstats.info</code></td>
+                </tr>
+                <tr class="osint-row" data-search="phone book of the world.com - find people &amp; companies - expo hotspot  phonebookoftheworld.com http://phonebookoftheworld.com/">
+                  <td><a href="http://phonebookoftheworld.com/">Phone Book of the World.com - find people &amp; companies - Expo Hotspot</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>phonebookoftheworld.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="phone operator lookup (lux)  mvg.lu https://www.mvg.lu/">
+                  <td><a href="https://www.mvg.lu/">Phone Operator Lookup (Lux)</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>mvg.lu</code></td>
+                </tr>
+                <tr class="osint-row" data-search="phonebook.cz  phonebook.cz https://phonebook.cz/">
+                  <td><a href="https://phonebook.cz/">Phonebook.cz</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>phonebook.cz</code></td>
+                </tr>
+                <tr class="osint-row" data-search="pictimo pictimo - the largest online collection of live streaming web cameras of the world. explore the earth most beautiful countries, cities, mountains, beaches &amp;amp; parks. added new indoor and outdoor... pictimo.com https://www.pictimo.com/">
+                  <td><a href="https://www.pictimo.com/">Pictimo</a></td>
+                  <td><p class="resource-description">Pictimo - the largest online collection of live streaming web cameras of the world. Explore the earth most beautiful countries, cities, mountains, beaches &amp;amp; parks. Added new indoor and outdoor...</p></td>
+                  <td><code>pictimo.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="pielco11/fav-up  github.com https://github.com/pielco11/fav-up">
+                  <td><a href="https://github.com/pielco11/fav-up">pielco11/fav-up</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>github.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="platesmania.com  platesmania.com http://platesmania.com/">
+                  <td><a href="http://platesmania.com/">Platesmania.com</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>platesmania.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="polish osint framework  otwartezrodla.pl https://otwartezrodla.pl/">
+                  <td><a href="https://otwartezrodla.pl/">Polish OSINT Framework</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>otwartezrodla.pl</code></td>
+                </tr>
+                <tr class="osint-row" data-search="predicta search  predictasearch.com https://predictasearch.com/">
+                  <td><a href="https://predictasearch.com/">Predicta Search</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>predictasearch.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="proff.no - norwegian company lookup  proff.no https://proff.no/">
+                  <td><a href="https://proff.no/">Proff.no - Norwegian Company Lookup</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>proff.no</code></td>
+                </tr>
+                <tr class="osint-row" data-search="profone cell phone gps tracking – cellphonetrackers.org  cellphonetrackers.org https://cellphonetrackers.org/">
+                  <td><a href="https://cellphonetrackers.org/">Profone Cell Phone GPS Tracking – CellPhoneTrackers.org</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>cellphonetrackers.org</code></td>
+                </tr>
+                <tr class="osint-row" data-search="proofpoint rules  rules.emergingthreats.net http://rules.emergingthreats.net/fwrules/">
+                  <td><a href="http://rules.emergingthreats.net/fwrules/">Proofpoint Rules</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>rules.emergingthreats.net</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+        <details class="alpha-group" data-group="R">
+          <summary><span>R</span><span class="group-count">10 links</span></summary>
+          <div class="table-wrap library-table-wrap">
+            <table class="osint-table">
+              <thead><tr><th scope="col">Resource</th><th scope="col">Description</th><th scope="col">Domain</th></tr></thead>
+              <tbody>
+                <tr class="osint-row" data-search="ravens/awesome-telco  github.com https://github.com/ravens/awesome-telco">
+                  <td><a href="https://github.com/ravens/awesome-telco">ravens/awesome-telco</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>github.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="realtime trains uk (passenger &amp; freight)  realtimetrains.co.uk http://www.realtimetrains.co.uk/">
+                  <td><a href="http://www.realtimetrains.co.uk/">Realtime Trains UK (Passenger &amp; Freight)</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>realtimetrains.co.uk</code></td>
+                </tr>
+                <tr class="osint-row" data-search="residential phone book (fr)  pagesjaunes.fr https://www.pagesjaunes.fr/pagesblanches">
+                  <td><a href="https://www.pagesjaunes.fr/pagesblanches">Residential Phone Book (FR)</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>pagesjaunes.fr</code></td>
+                </tr>
+                <tr class="osint-row" data-search="reverse analytics id - find domains sharing the same analytics id  dnslytics.com https://dnslytics.com/reverse-analytics">
+                  <td><a href="https://dnslytics.com/reverse-analytics">Reverse Analytics ID - Find domains sharing the same Analytics ID</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>dnslytics.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="reverse image search – get this extension for 🦊 firefox (en-us)  addons.mozilla.org https://addons.mozilla.org/en-us/firefox/addon/image-reverse-search/">
+                  <td><a href="https://addons.mozilla.org/en-US/firefox/addon/image-reverse-search/">Reverse Image Search – Get this Extension for 🦊 Firefox (en-US)</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>addons.mozilla.org</code></td>
+                </tr>
+                <tr class="osint-row" data-search="reverse ip lookup - yougetsignal  yougetsignal.com https://www.yougetsignal.com/tools/web-sites-on-web-server/">
+                  <td><a href="https://www.yougetsignal.com/tools/web-sites-on-web-server/">Reverse IP Lookup - YouGetSignal</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>yougetsignal.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="reverse phone lookup | zlookup  zlookup.com https://www.zlookup.com/">
+                  <td><a href="https://www.zlookup.com/">Reverse Phone Lookup | ZLOOKUP</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>zlookup.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="riskiq community  community.riskiq.com https://community.riskiq.com/">
+                  <td><a href="https://community.riskiq.com/">RiskIQ Community</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>community.riskiq.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="rnac - spanish civil aircraft register  aire.org http://aire.org/rnac/index_eng.htm">
+                  <td><a href="http://aire.org/rnac/index_eng.htm">RNAC - Spanish Civil Aircraft Register</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>aire.org</code></td>
+                </tr>
+                <tr class="osint-row" data-search="robtex  robtex.com https://www.robtex.com/">
+                  <td><a href="https://www.robtex.com/">Robtex</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>robtex.com</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+        <details class="alpha-group" data-group="S">
+          <summary><span>S</span><span class="group-count">41 links</span></summary>
+          <div class="table-wrap library-table-wrap">
+            <table class="osint-table">
+              <thead><tr><th scope="col">Resource</th><th scope="col">Description</th><th scope="col">Domain</th></tr></thead>
+              <tbody>
+                <tr class="osint-row" data-search="sanctionsexplorer  sanctionsexplorer.org https://sanctionsexplorer.org/">
+                  <td><a href="https://sanctionsexplorer.org/">SanctionsExplorer</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>sanctionsexplorer.org</code></td>
+                </tr>
+                <tr class="osint-row" data-search="scramble  scramble.nl https://www.scramble.nl/">
+                  <td><a href="https://www.scramble.nl/">Scramble</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>scramble.nl</code></td>
+                </tr>
+                <tr class="osint-row" data-search="search amazon cloud  cse.google.com https://cse.google.com/cse?cx=005797772976587943970:g-6ohngosio">
+                  <td><a href="https://cse.google.com/cse?cx=005797772976587943970:g-6ohngosio">Search Amazon Cloud</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>cse.google.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="search by image addon  github.com https://github.com/dessant/search-by-image">
+                  <td><a href="https://github.com/dessant/search-by-image">Search By Image Addon</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>github.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="search engine for source code  publicwww.com https://publicwww.com/">
+                  <td><a href="https://publicwww.com/">Search Engine for Source Code</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>publicwww.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="search for cell towers  cellreception.com http://www.cellreception.com/towers/">
+                  <td><a href="http://www.cellreception.com/towers/">Search for Cell Towers</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>cellreception.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="search for property information from hm land registry  gov.uk https://www.gov.uk/search-property-information-land-registry">
+                  <td><a href="https://www.gov.uk/search-property-information-land-registry">Search for property information from HM Land Registry</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>gov.uk</code></td>
+                </tr>
+                <tr class="osint-row" data-search="search google docs  cse.google.com https://cse.google.com/cse?cx=013991603413798772546:rse-4irjrn8">
+                  <td><a href="https://cse.google.com/cse?cx=013991603413798772546:rse-4irjrn8">Search Google Docs</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>cse.google.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="search google maps for photos by id  maps.google.com https://maps.google.com/maps/contrib/userid/photos">
+                  <td><a href="https://maps.google.com/maps/contrib/userID/photos">Search Google Maps for Photos by ID</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>maps.google.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="search results - data.gov.uk  data.gov.uk https://data.gov.uk/data/search">
+                  <td><a href="https://data.gov.uk/data/search">Search Results - data.gov.uk</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>data.gov.uk</code></td>
+                </tr>
+                <tr class="osint-row" data-search="search4faces.com  search4faces.com https://search4faces.com/en/">
+                  <td><a href="https://search4faces.com/en/">search4faces.com</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>search4faces.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="sec497: practical open-source intelligence (osint) training sans sec497, a foundational course in open-source intelligence (osint) teaches students how to find, gather, and analyze data from the internet. sans.org https://www.sans.org/cyber-security-courses/practical-open-source-intelligence/">
+                  <td><a href="https://www.sans.org/cyber-security-courses/practical-open-source-intelligence/">SEC497: Practical Open-Source Intelligence (OSINT) Training</a></td>
+                  <td><p class="resource-description">SANS SEC497, a foundational course in open-source intelligence (OSINT) teaches students how to find, gather, and analyze data from the Internet.</p></td>
+                  <td><code>sans.org</code></td>
+                </tr>
+                <tr class="osint-row" data-search="sec587: advanced open-source intelligence (osint) gathering and analysis learn how to perform advanced osint investigations as well as utilize json and python. explore topics such as cryptocurrency, the dark web, disinformation, and advanced image and video osint analysis. sans.org https://www.sans.org/cyber-security-courses/advanced-open-source-intelligence-gathering-analysis">
+                  <td><a href="https://www.sans.org/cyber-security-courses/advanced-open-source-intelligence-gathering-analysis">SEC587: Advanced Open-Source Intelligence (OSINT) Gathering and Analysis</a></td>
+                  <td><p class="resource-description">Learn how to perform advanced OSINT investigations as well as utilize JSON and Python. Explore topics such as cryptocurrency, the dark web, disinformation, and advanced image and video OSINT analysis.</p></td>
+                  <td><code>sans.org</code></td>
+                </tr>
+                <tr class="osint-row" data-search="securitytrails - historic domain/dns data  securitytrails.com https://securitytrails.com/">
+                  <td><a href="https://securitytrails.com/">SecurityTrails - historic domain/DNS data</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>securitytrails.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="seek logo  seeklogo.com https://seeklogo.com/">
+                  <td><a href="https://seeklogo.com/">Seek Logo</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>seeklogo.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="semrush turn the algorithm into a friend. make your business visible online with 55+ tools for seo, ppc, content, social media, competitive research, and more. semrush.com https://www.semrush.com/">
+                  <td><a href="https://www.semrush.com/">Semrush</a></td>
+                  <td><p class="resource-description">Turn the algorithm into a friend. Make your business visible online with 55+ tools for SEO, PPC, content, social media, competitive research, and more.</p></td>
+                  <td><code>semrush.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="sex offender records search directory  publicrecords.onlinesearches.com http://publicrecords.onlinesearches.com/sex-offender-registration.htm">
+                  <td><a href="http://publicrecords.onlinesearches.com/Sex-Offender-Registration.htm">Sex Offender Records Search Directory</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>publicrecords.onlinesearches.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="seznam - czech search engine  seznam.cz http://seznam.cz/">
+                  <td><a href="http://seznam.cz/">Seznam - Czech Search Engine</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>seznam.cz</code></td>
+                </tr>
+                <tr class="osint-row" data-search="shadow dragon  shadowdragon.io https://shadowdragon.io/">
+                  <td><a href="https://shadowdragon.io/">Shadow Dragon</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>shadowdragon.io</code></td>
+                </tr>
+                <tr class="osint-row" data-search="sherlock  github.com https://github.com/sherlock-project/sherlock">
+                  <td><a href="https://github.com/sherlock-project/sherlock">Sherlock</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>github.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="shipais  shipais.com http://www.shipais.com/">
+                  <td><a href="http://www.shipais.com/">ShipAIS</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>shipais.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="shodan  shodan.io https://shodan.io/">
+                  <td><a href="https://shodan.io/">Shodan</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>shodan.io</code></td>
+                </tr>
+                <tr class="osint-row" data-search="skydb  en.phorio.com https://en.phorio.com/">
+                  <td><a href="https://en.phorio.com/">SKYDB</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>en.phorio.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="skyscraperpage.com  skyscraperpage.com http://skyscraperpage.com/">
+                  <td><a href="http://skyscraperpage.com/">SkyscraperPage.com</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>skyscraperpage.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="sladur.com bulgarian dating website  sladur.com http://www.sladur.com/">
+                  <td><a href="http://www.sladur.com/">Sladur.com Bulgarian dating website</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>sladur.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="snusbase  databases.today https://databases.today/search.php">
+                  <td><a href="https://databases.today/search.php">Snusbase</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>databases.today</code></td>
+                </tr>
+                <tr class="osint-row" data-search="social media geoint  cse.google.com https://cse.google.com/cse?cx=015328649639895072395:sbv3zyxzmji">
+                  <td><a href="https://cse.google.com/cse?cx=015328649639895072395:sbv3zyxzmji">Social Media GeoInt</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>cse.google.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="solicitor&#x27;s regulatory authority search  sra.org.uk https://www.sra.org.uk/consumers/solicitor-check/">
+                  <td><a href="https://www.sra.org.uk/consumers/solicitor-check/">Solicitor&#x27;s Regulatory Authority Search</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>sra.org.uk</code></td>
+                </tr>
+                <tr class="osint-row" data-search="sowsearch  sowsearch.info https://sowsearch.info/">
+                  <td><a href="https://sowsearch.info/">Sowsearch</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>sowsearch.info</code></td>
+                </tr>
+                <tr class="osint-row" data-search="spanish company directories  paginasamarillas.es https://www.paginasamarillas.es/">
+                  <td><a href="https://www.paginasamarillas.es/">Spanish Company Directories</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>paginasamarillas.es</code></td>
+                </tr>
+                <tr class="osint-row" data-search="spoke business information  spoke.com https://www.spoke.com/">
+                  <td><a href="https://www.spoke.com/">Spoke Business information</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>spoke.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="spycloud email check  portal.spycloud.com https://portal.spycloud.com/endpoint/enriched-stats/test@test.com">
+                  <td><a href="https://portal.spycloud.com/endpoint/enriched-stats/test@test.com">Spycloud Email Check</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>portal.spycloud.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="spyonweb we take the information from public sources, then structure it for your quick and convenient search for the websites that probably belong to the same owner. spyonweb.com https://spyonweb.com/">
+                  <td><a href="https://spyonweb.com/">SpyOnWeb</a></td>
+                  <td><p class="resource-description">We take the information from public sources, then structure it for your quick and convenient search for the websites that probably belong to the same owner.</p></td>
+                  <td><code>spyonweb.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="stay friends (de/eu)  stayfriends.com https://www.stayfriends.com/">
+                  <td><a href="https://www.stayfriends.com/">Stay Friends (DE/EU)</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>stayfriends.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="steganographic decoder  futureboy.us https://futureboy.us/stegano/decinput.html">
+                  <td><a href="https://futureboy.us/stegano/decinput.html">Steganographic Decoder</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>futureboy.us</code></td>
+                </tr>
+                <tr class="osint-row" data-search="steven harris | sans institute  sans.org https://www.sans.org/profiles/steven-harris/">
+                  <td><a href="https://www.sans.org/profiles/steven-harris/">Steven Harris | SANS Institute</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>sans.org</code></td>
+                </tr>
+                <tr class="osint-row" data-search="storysaver.net download instagram story and highlights anonymously for online, no need apps. online easily with one simple click. storysaver.net https://www.storysaver.net/">
+                  <td><a href="https://www.storysaver.net/">Storysaver.net</a></td>
+                  <td><p class="resource-description">Download Instagram Story and Highlights anonymously for online, No Need Apps. Online Easily with one simple click.</p></td>
+                  <td><code>storysaver.net</code></td>
+                </tr>
+                <tr class="osint-row" data-search="suncalc - sunrise, sunset, shadow length, solar eclipse, sun position, sun phase, sun height, sun calculator, sun movement, map, sunlight phases, elevation, photovoltaic system, photovoltaic  suncalc.org https://www.suncalc.org/#/40.1789,-3.5156,3/2019.06.07/09:18/1/3">
+                  <td><a href="https://www.suncalc.org/#/40.1789,-3.5156,3/2019.06.07/09:18/1/3">SunCalc - sunrise, sunset, shadow length, solar eclipse, sun position, sun phase, sun height, sun calculator, sun movement, map, sunlight phases, elevation, Photovoltaic system, Photovoltaic</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>suncalc.org</code></td>
+                </tr>
+                <tr class="osint-row" data-search="swiss company gazette  shab.ch https://shab.ch/#!/gazette">
+                  <td><a href="https://shab.ch/#!/gazette">Swiss Company Gazette</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>shab.ch</code></td>
+                </tr>
+                <tr class="osint-row" data-search="swiss geoportal (ch)  map.geo.admin.ch https://map.geo.admin.ch/?lang=en&amp;topic=ech&amp;bglayer=ch.swisstopo.pixelkarte-farbe&amp;layers=ch.swisstopo.zeitreihen,ch.bfs.gebaeude_wohnungs_register,ch.bav.haltestellen-oev,ch.swisstopo.swisstlm3d-wanderwege,ch.astra.wanderland-sperrungen_umleitungen&amp;layers_opacity=1,1,1,0.8,0.8&amp;layers_visibility=false,false,false,false,false&amp;layers_timestamp=18641231,,,,">
+                  <td><a href="https://map.geo.admin.ch/?lang=en&amp;topic=ech&amp;bgLayer=ch.swisstopo.pixelkarte-farbe&amp;layers=ch.swisstopo.zeitreihen,ch.bfs.gebaeude_wohnungs_register,ch.bav.haltestellen-oev,ch.swisstopo.swisstlm3d-wanderwege,ch.astra.wanderland-sperrungen_umleitungen&amp;layers_opacity=1,1,1,0.8,0.8&amp;layers_visibility=false,false,false,false,false&amp;layers_timestamp=18641231,,,,">Swiss Geoportal (CH)</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>map.geo.admin.ch</code></td>
+                </tr>
+                <tr class="osint-row" data-search="synapsint.com  synapsint.com https://synapsint.com/">
+                  <td><a href="https://synapsint.com/">Synapsint.com</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>synapsint.com</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+        <details class="alpha-group" data-group="T">
+          <summary><span>T</span><span class="group-count">19 links</span></summary>
+          <div class="table-wrap library-table-wrap">
+            <table class="osint-table">
+              <thead><tr><th scope="col">Resource</th><th scope="col">Description</th><th scope="col">Domain</th></tr></thead>
+              <tbody>
+                <tr class="osint-row" data-search="telefonbuch (ch)  tel.search.ch https://tel.search.ch/">
+                  <td><a href="https://tel.search.ch/">Telefonbuch (CH)</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>tel.search.ch</code></td>
+                </tr>
+                <tr class="osint-row" data-search="the ethereum block explorer  etherscan.io https://etherscan.io/">
+                  <td><a href="https://etherscan.io/">The Ethereum Block Explorer</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>etherscan.io</code></td>
+                </tr>
+                <tr class="osint-row" data-search="the hoth use our backlink checker tool to see how many backlinks you have, your anchor text, and even spy on your competitor&#x27;s backlinks! thehoth.com https://www.thehoth.com/backlinks-checker/">
+                  <td><a href="https://www.thehoth.com/backlinks-checker/">The Hoth</a></td>
+                  <td><p class="resource-description">Use our backlink checker tool to see how many backlinks you have, your anchor text, and even spy on your competitor&#x27;s backlinks!</p></td>
+                  <td><code>thehoth.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="the national archives  nationalarchives.gov.uk http://www.nationalarchives.gov.uk/">
+                  <td><a href="http://www.nationalarchives.gov.uk/">The National Archives</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>nationalarchives.gov.uk</code></td>
+                </tr>
+                <tr class="osint-row" data-search="the org  theorg.com https://theorg.com/">
+                  <td><a href="https://theorg.com/">THE ORG</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>theorg.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="the slang dictionary - slangit  slangit.com https://slangit.com/">
+                  <td><a href="https://slangit.com/">The Slang Dictionary - Slangit</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>slangit.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="the time zone converter  thetimezoneconverter.com https://www.thetimezoneconverter.com/">
+                  <td><a href="https://www.thetimezoneconverter.com/">The Time Zone Converter</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>thetimezoneconverter.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="threatminer threatminer is a threat intelligence portal that provides information on indicators of compromise (ioc) such as domains, ip address, malware samples (md5, sha1 and sha256), ssl certificates, whois information and malicious urls such as phishing and malware links. threatminer.org https://www.threatminer.org/">
+                  <td><a href="https://www.threatminer.org/">ThreatMiner</a></td>
+                  <td><p class="resource-description">ThreatMiner is a threat intelligence portal that provides information on indicators of compromise (IOC) such as domains, IP address, malware samples (MD5, SHA1 and SHA256), SSL certificates, WHOIS information and malicious URLs such as phishing and malware links.</p></td>
+                  <td><code>threatminer.org</code></td>
+                </tr>
+                <tr class="osint-row" data-search="timeanddate.com  timeanddate.com https://www.timeanddate.com/">
+                  <td><a href="https://www.timeanddate.com/">timeanddate.com</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>timeanddate.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="timeline editor free online timeline editor. a lot of events, parameters. upload images, video youtube etc. time.graphics https://time.graphics/editor">
+                  <td><a href="https://time.graphics/editor">Timeline editor</a></td>
+                  <td><p class="resource-description">Free online timeline editor. A lot of events, parameters. Upload images, video youtube etc.</p></td>
+                  <td><code>time.graphics</code></td>
+                </tr>
+                <tr class="osint-row" data-search="tineye reverse image search  tineye.com http://www.tineye.com/">
+                  <td><a href="http://www.tineye.com/">TinEye Reverse Image Search</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>tineye.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="tor66  t.co https://t.co/szdc9kgq48">
+                  <td><a href="https://t.co/szdC9kgQ48">Tor66</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>t.co</code></td>
+                </tr>
+                <tr class="osint-row" data-search="traceroute on a map  en.dnstools.ch http://en.dnstools.ch/visual-traceroute.html">
+                  <td><a href="http://en.dnstools.ch/visual-traceroute.html">Traceroute on a map</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>en.dnstools.ch</code></td>
+                </tr>
+                <tr class="osint-row" data-search="track bitcoin  blockonomics.co https://www.blockonomics.co/blockonomics#/">
+                  <td><a href="https://www.blockonomics.co/blockonomics#/">Track Bitcoin</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>blockonomics.co</code></td>
+                </tr>
+                <tr class="osint-row" data-search="traffic violation lookup (spain)  sedeapl.dgt.gob.es https://sedeapl.dgt.gob.es/web_ttra_consulta/todos.faces">
+                  <td><a href="https://sedeapl.dgt.gob.es/WEB_TTRA_CONSULTA/Todos.faces">Traffic Violation Lookup (Spain)</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>sedeapl.dgt.gob.es</code></td>
+                </tr>
+                <tr class="osint-row" data-search="transl8it! - understand text and chat lingo  transl8it.com http://www.transl8it.com/">
+                  <td><a href="http://www.transl8it.com/">Transl8it! - understand text and chat lingo</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>transl8it.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="truecaller  truecaller.com https://www.truecaller.com/">
+                  <td><a href="https://www.truecaller.com/">Truecaller</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>truecaller.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="trust online - uk ccj database  trustonline.org.uk https://www.trustonline.org.uk/">
+                  <td><a href="https://www.trustonline.org.uk/">Trust Online - UK CCJ database</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>trustonline.org.uk</code></td>
+                </tr>
+                <tr class="osint-row" data-search="twiav - hi-res aerial pics (netherlands)  twiav.nl https://twiav.nl/nl/vervoer/luchtfoto_prorail.htm?x=153500&amp;y=463000&amp;l=10&amp;b=lichtgrijs">
+                  <td><a href="https://twiav.nl/nl/vervoer/luchtfoto_prorail.htm?x=153500&amp;y=463000&amp;l=10&amp;b=lichtgrijs">TWIAV - hi-res aerial pics (Netherlands)</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>twiav.nl</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+        <details class="alpha-group" data-group="U">
+          <summary><span>U</span><span class="group-count">14 links</span></summary>
+          <div class="table-wrap library-table-wrap">
+            <table class="osint-table">
+              <thead><tr><th scope="col">Resource</th><th scope="col">Description</th><th scope="col">Domain</th></tr></thead>
+              <tbody>
+                <tr class="osint-row" data-search="ubersuggest  app.neilpatel.com https://app.neilpatel.com/en/seo_analyzer/backlinks">
+                  <td><a href="https://app.neilpatel.com/en/seo_analyzer/backlinks">Ubersuggest</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>app.neilpatel.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="uk banking sort codes  swiftcodesinfo.com http://www.swiftcodesinfo.com/sort-code/index.php">
+                  <td><a href="http://www.swiftcodesinfo.com/sort-code/index.php">UK Banking Sort Codes</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>swiftcodesinfo.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="uk birth &amp; death records  search.findmypast.co.uk https://search.findmypast.co.uk/search-world-records/england-and-wales-births-1837-2006">
+                  <td><a href="https://search.findmypast.co.uk/search-world-records/england-and-wales-births-1837-2006">UK Birth &amp; Death Records</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>search.findmypast.co.uk</code></td>
+                </tr>
+                <tr class="osint-row" data-search="uk birth adoption register  ukbirthadoptionregister.com http://www.ukbirthadoptionregister.com/search.php">
+                  <td><a href="http://www.ukbirthadoptionregister.com/search.php">UK Birth Adoption Register</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>ukbirthadoptionregister.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="uk lookup  lookupuk.com http://www.lookupuk.com/main.html">
+                  <td><a href="http://www.lookupuk.com/main.html">UK Lookup</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>lookupuk.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="undetectable ai use our free ai detector to check if your ai-generated content will be flagged. then, click to humanize your ai text and bypass all ai detection tools. undetectable.ai https://undetectable.ai/">
+                  <td><a href="https://undetectable.ai/">Undetectable AI</a></td>
+                  <td><p class="resource-description">Use our free AI detector to check if your AI-generated content will be flagged. Then, click to humanize your AI text and bypass all AI detection tools.</p></td>
+                  <td><code>undetectable.ai</code></td>
+                </tr>
+                <tr class="osint-row" data-search="urban dictionary  urbandictionary.com https://www.urbandictionary.com/">
+                  <td><a href="https://www.urbandictionary.com/">Urban Dictionary</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>urbandictionary.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="url hunter a recon tool that allows searching on urls that are exposed via shortener services - utkusen/urlhunter github.com https://github.com/utkusen/urlhunter">
+                  <td><a href="https://github.com/utkusen/urlhunter">URL Hunter</a></td>
+                  <td><p class="resource-description">a recon tool that allows searching on URLs that are exposed via shortener services - utkusen/urlhunter</p></td>
+                  <td><code>github.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="urlscan urlscan.io - website scanner for suspicious and malicious urls urlscan.io https://urlscan.io/">
+                  <td><a href="https://urlscan.io/">URLScan</a></td>
+                  <td><p class="resource-description">urlscan.io - Website scanner for suspicious and malicious URLs</p></td>
+                  <td><code>urlscan.io</code></td>
+                </tr>
+                <tr class="osint-row" data-search="us campaign finance  campaignmoney.com https://www.campaignmoney.com/">
+                  <td><a href="https://www.campaignmoney.com/">US Campaign Finance</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>campaignmoney.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="us gov travel advisories  us%20gov%20travel%20advisories.com http://us%20gov%20travel%20advisories.com/">
+                  <td><a href="http://us%20gov%20travel%20advisories.com/">US Gov Travel Advisories</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>us%20gov%20travel%20advisories.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="us patent office  uspto.gov https://www.uspto.gov/patents/search">
+                  <td><a href="https://www.uspto.gov/patents/search">US Patent Office</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>uspto.gov</code></td>
+                </tr>
+                <tr class="osint-row" data-search="us travel advisories (map)  travelmaps.state.gov https://travelmaps.state.gov/tsgmap/">
+                  <td><a href="https://travelmaps.state.gov/TSGMap/">US Travel Advisories (Map)</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>travelmaps.state.gov</code></td>
+                </tr>
+                <tr class="osint-row" data-search="username search  usersearch.org https://www.usersearch.org/">
+                  <td><a href="https://www.usersearch.org/">Username Search</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>usersearch.org</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+        <details class="alpha-group" data-group="V">
+          <summary><span>V</span><span class="group-count">8 links</span></summary>
+          <div class="table-wrap library-table-wrap">
+            <table class="osint-table">
+              <thead><tr><th scope="col">Resource</th><th scope="col">Description</th><th scope="col">Domain</th></tr></thead>
+              <tbody>
+                <tr class="osint-row" data-search="vat-search.eu  vat-search.eu https://vat-search.eu/">
+                  <td><a href="https://vat-search.eu/">VAT-Search.eu</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>vat-search.eu</code></td>
+                </tr>
+                <tr class="osint-row" data-search="vault - company &amp; career intelligence  vault.com https://www.vault.com/">
+                  <td><a href="https://www.vault.com/">Vault - Company &amp; Career Intelligence</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>vault.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="vehicle/owner lookup (ch)  linker.ch https://www.linker.ch/eigenlink/autonummern_index.htm">
+                  <td><a href="https://www.linker.ch/eigenlink/autonummern_index.htm">Vehicle/Owner Lookup (CH)</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>linker.ch</code></td>
+                </tr>
+                <tr class="osint-row" data-search="viewdns.info - ip/domain/mac lookup  viewdns.info https://viewdns.info/">
+                  <td><a href="https://viewdns.info/">ViewDNS.info - IP/Domain/MAC lookup</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>viewdns.info</code></td>
+                </tr>
+                <tr class="osint-row" data-search="virusshare.com  virusshare.com https://virusshare.com/">
+                  <td><a href="https://virusshare.com/">VirusShare.com</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>virusshare.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="virustotal  virustotal.com https://www.virustotal.com/#/home/upload">
+                  <td><a href="https://www.virustotal.com/#/home/upload">VirusTotal</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>virustotal.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="voila norbert - e-mail address finder  voila%20norbert%20-%20e-mail%20address%20finder.com http://voila%20norbert%20-%20e-mail%20address%20finder.com/">
+                  <td><a href="http://voila%20norbert%20-%20e-mail%20address%20finder.com/">Voila Norbert - E-mail Address Finder</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>voila%20norbert%20-%20e-mail%20address%20finder.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="voter records (us)  voterrecords.com https://voterrecords.com/">
+                  <td><a href="https://voterrecords.com/">Voter Records (US)</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>voterrecords.com</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+        <details class="alpha-group" data-group="W">
+          <summary><span>W</span><span class="group-count">20 links</span></summary>
+          <div class="table-wrap library-table-wrap">
+            <table class="osint-table">
+              <thead><tr><th scope="col">Resource</th><th scope="col">Description</th><th scope="col">Domain</th></tr></thead>
+              <tbody>
+                <tr class="osint-row" data-search="walletexplorer.com: smart bitcoin block explorer  walletexplorer.com https://www.walletexplorer.com/">
+                  <td><a href="https://www.walletexplorer.com/">WalletExplorer.com: smart Bitcoin block explorer</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>walletexplorer.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="wayback google analytics a lightweight tool for scraping current and historic google analytics data - bellingcat/wayback-google-analytics github.com https://github.com/bellingcat/wayback-google-analytics">
+                  <td><a href="https://github.com/bellingcat/wayback-google-analytics">Wayback Google Analytics</a></td>
+                  <td><p class="resource-description">A lightweight tool for scraping current and historic Google Analytics data - bellingcat/wayback-google-analytics</p></td>
+                  <td><code>github.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="web citation  webcitation.org https://webcitation.org/">
+                  <td><a href="https://webcitation.org/">Web Citation</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>webcitation.org</code></td>
+                </tr>
+                <tr class="osint-row" data-search="web data research assistant (webdatara)  southampton.ac.uk https://www.southampton.ac.uk/~lac/webdataresearchassistant/">
+                  <td><a href="https://www.southampton.ac.uk/~lac/WebDataResearchAssistant/">Web Data Research Assistant (WebDataRA)</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>southampton.ac.uk</code></td>
+                </tr>
+                <tr class="osint-row" data-search="webmii  webmii.com http://webmii.com/">
+                  <td><a href="http://webmii.com/">WebMii</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>webmii.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="website informer  website.informer.com https://website.informer.com/">
+                  <td><a href="https://website.informer.com/">Website Informer</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>website.informer.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="well-known.dev an open index of well-known resources. well-known.dev https://well-known.dev/">
+                  <td><a href="https://well-known.dev/">Well-known.dev</a></td>
+                  <td><p class="resource-description">An open index of well-known resources.</p></td>
+                  <td><code>well-known.dev</code></td>
+                </tr>
+                <tr class="osint-row" data-search="what is my ip address? find your ip, whois and more on ip-adress.com  ip-adress.com https://www.ip-adress.com/">
+                  <td><a href="https://www.ip-adress.com/">What Is My IP Address? Find Your IP, Whois And More On IP-Adress.com</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>ip-adress.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="whatsmyname.app  whatsmyname.app https://whatsmyname.app/">
+                  <td><a href="https://whatsmyname.app/">Whatsmyname.app</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>whatsmyname.app</code></td>
+                </tr>
+                <tr class="osint-row" data-search="whois lookup  whoisrequest.com http://whoisrequest.com/">
+                  <td><a href="http://whoisrequest.com/">Whois Lookup</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>whoisrequest.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="whois search  whois.icann.org http://whois.icann.org/en">
+                  <td><a href="http://whois.icann.org/en">WHOIS Search</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>whois.icann.org</code></td>
+                </tr>
+                <tr class="osint-row" data-search="whoisology.com  whoisology.com https://whoisology.com/#advanced">
+                  <td><a href="https://whoisology.com/#advanced">Whoisology.com</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>whoisology.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="whoxy whois api lets you quickly lookup a domain name&#x27;s whois data. you get fully parsed whois fields in xml or json format at just $2 per 1000 domains! whoxy.com https://www.whoxy.com/">
+                  <td><a href="https://www.whoxy.com/">Whoxy</a></td>
+                  <td><p class="resource-description">WHOIS API lets you quickly lookup a domain name&#x27;s WHOIS data. You get fully parsed WHOIS fields in XML or JSON format at just $2 per 1000 domains!</p></td>
+                  <td><code>whoxy.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="wigle: wireless network mapping  wigle.net https://wigle.net/">
+                  <td><a href="https://wigle.net/">WiGLE: Wireless Network Mapping</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>wigle.net</code></td>
+                </tr>
+                <tr class="osint-row" data-search="wolfram|alpha: making the world’s knowledge computable  wolframalpha.com https://www.wolframalpha.com/">
+                  <td><a href="https://www.wolframalpha.com/">Wolfram|Alpha: Making the world’s knowledge computable</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>wolframalpha.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="world license plates license plates of the world worldlicenseplates.com http://www.worldlicenseplates.com/hp.html">
+                  <td><a href="http://www.worldlicenseplates.com/hp.html">World License Plates</a></td>
+                  <td><p class="resource-description">License Plates of the World</p></td>
+                  <td><code>worldlicenseplates.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="worldmap of osint tools  cybdetective.com http://cybdetective.com/osintmap/">
+                  <td><a href="http://cybdetective.com/osintmap/">Worldmap of OSINT tools</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>cybdetective.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="www.oldmapsonline.org  oldmapsonline.org https://www.oldmapsonline.org/">
+                  <td><a href="https://www.oldmapsonline.org/">Www.oldmapsonline.org</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>oldmapsonline.org</code></td>
+                </tr>
+                <tr class="osint-row" data-search="www.startpage.com  startpage.com https://startpage.com/">
+                  <td><a href="https://startpage.com/">www.startpage.com</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>startpage.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="www.ukphonebook.com  ukphonebook.com https://www.ukphonebook.com/">
+                  <td><a href="https://www.ukphonebook.com/">www.ukphonebook.com</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>ukphonebook.com</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+        <details class="alpha-group" data-group="X">
+          <summary><span>X</span><span class="group-count">2 links</span></summary>
+          <div class="table-wrap library-table-wrap">
+            <table class="osint-table">
+              <thead><tr><th scope="col">Resource</th><th scope="col">Description</th><th scope="col">Domain</th></tr></thead>
+              <tbody>
+                <tr class="osint-row" data-search="xhibit.justice.gov.uk  xhibit.justice.gov.uk http://xhibit.justice.gov.uk/">
+                  <td><a href="http://xhibit.justice.gov.uk/">Xhibit.justice.gov.uk</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>xhibit.justice.gov.uk</code></td>
+                </tr>
+                <tr class="osint-row" data-search="xing - professional network (de, at, ch)  xing.com https://xing.com/">
+                  <td><a href="https://xing.com/">Xing - Professional Network (DE, AT, CH)</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>xing.com</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+        <details class="alpha-group" data-group="Y">
+          <summary><span>Y</span><span class="group-count">5 links</span></summary>
+          <div class="table-wrap library-table-wrap">
+            <table class="osint-table">
+              <thead><tr><th scope="col">Resource</th><th scope="col">Description</th><th scope="col">Domain</th></tr></thead>
+              <tbody>
+                <tr class="osint-row" data-search="yandex (ru)  yandex.ru https://yandex.ru/">
+                  <td><a href="https://yandex.ru/">Yandex (RU)</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>yandex.ru</code></td>
+                </tr>
+                <tr class="osint-row" data-search="yandex.images: search for images on the internet, search by image  yandex.com https://yandex.com/images/">
+                  <td><a href="https://yandex.com/images/">Yandex.Images: search for images on the internet, search by image</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>yandex.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="yandex.maps — detailed map of the world  yandex.com https://yandex.com/maps/">
+                  <td><a href="https://yandex.com/maps/">Yandex.Maps — detailed map of the world</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>yandex.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="yandex.translate  translate.yandex.com https://translate.yandex.com/">
+                  <td><a href="https://translate.yandex.com/">Yandex.Translate</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>translate.yandex.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="yellow pages (fr)  pagesjaunes.fr https://www.pagesjaunes.fr/">
+                  <td><a href="https://www.pagesjaunes.fr/">Yellow Pages (FR)</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>pagesjaunes.fr</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+        <details class="alpha-group" data-group="Z">
+          <summary><span>Z</span><span class="group-count">2 links</span></summary>
+          <div class="table-wrap library-table-wrap">
+            <table class="osint-table">
+              <thead><tr><th scope="col">Resource</th><th scope="col">Description</th><th scope="col">Domain</th></tr></thead>
+              <tbody>
+                <tr class="osint-row" data-search="zoomeye  zoomeye.org https://www.zoomeye.org/">
+                  <td><a href="https://www.zoomeye.org/">zoomeye</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>zoomeye.org</code></td>
+                </tr>
+                <tr class="osint-row" data-search="zoopla  zoopla.co.uk https://www.zoopla.co.uk/">
+                  <td><a href="https://www.zoopla.co.uk/">Zoopla</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>zoopla.co.uk</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+        <details class="alpha-group" data-group="#">
+          <summary><span>0–9 / Symbols</span><span class="group-count">4 links</span></summary>
+          <div class="table-wrap library-table-wrap">
+            <table class="osint-table">
+              <thead><tr><th scope="col">Resource</th><th scope="col">Description</th><th scope="col">Domain</th></tr></thead>
+              <tbody>
+                <tr class="osint-row" data-search="100 alternative search engines | search engines list | marco diversi  marcodiversi.com https://marcodiversi.com/blog/alternative-search-engines/">
+                  <td><a href="https://marcodiversi.com/blog/alternative-search-engines/">100 Alternative Search Engines | Search Engines List | Marco Diversi</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>marcodiversi.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="12-12 reverse phone lookup (be)  de1212.be https://www.de1212.be/reverse.php">
+                  <td><a href="https://www.de1212.be/reverse.php">12-12 Reverse Phone Lookup (BE)</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>de1212.be</code></td>
+                </tr>
+                <tr class="osint-row" data-search="15 free satellite imagery data sources - gis geography  gisgeography.com https://gisgeography.com/free-satellite-imagery-data-list/">
+                  <td><a href="https://gisgeography.com/free-satellite-imagery-data-list/">15 Free Satellite Imagery Data Sources - GIS Geography</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>gisgeography.com</code></td>
+                </tr>
+                <tr class="osint-row" data-search="192.com - search for people, businesses and plac...  192.com https://www.192.com/">
+                  <td><a href="https://www.192.com/">192.com - Search for People, Businesses and Plac...</a></td>
+                  <td><span class="no-description">—</span></td>
+                  <td><code>192.com</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+      </div>
+      <p id="osint-empty" class="empty-state" hidden>No links match that search.</p>
+    </section>
+
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+                  </html>
